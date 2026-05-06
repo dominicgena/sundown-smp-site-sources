@@ -1,0 +1,37 @@
+interface GalleryImage {
+    name: string
+    altText: string
+}
+
+export class Gallery extends Array<GalleryImage> {
+    constructor(images: GalleryImage[] = []) {
+        super(...images)
+    }
+
+    sortAlphabetically(): void {// just in case, it might save me from having to manually alphabetize the config
+        this.sort((a, b) => a.name.localeCompare(b.name))
+    }
+
+    // helper function to get the URL of any image
+    getUrl(index: number, baseUrl: string, ext: string): string {
+        const item = this[index]
+        if (!item) return ""
+        return `${baseUrl}/${item.name}.${ext}`
+    }
+
+    getAltText(index: number) {
+        const item = this[index]
+        if (!item) return ""
+        return item.altText
+    }
+
+    // helper function to get a random index, which will be used by the slideshow
+    getRandomIndex(currentIndex: number): number {
+        if (this.length <= 1) return 0
+        let nextIndex: number
+        do {
+            nextIndex = Math.floor(Math.random() * this.length)
+        } while (nextIndex == currentIndex)
+        return nextIndex
+    }
+}
