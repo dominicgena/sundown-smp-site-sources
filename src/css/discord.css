@@ -13,7 +13,6 @@ body, html {
     width: 100%;
     height: 100vh;
     overflow: hidden; 
-    /* Radial gradient: Dark gray center to black edges */
     background: radial-gradient(circle, #1a1a1a 0%, #000000 100%);
     display: flex;
     justify-content: center;
@@ -51,7 +50,7 @@ body, html {
 }
 
 .join-card {
-    background: rgba(20, 20, 20, 0.6); /* More transparent to show the gradient through */
+    background: rgba(20, 20, 20, 0.6);
     padding: 2.5rem;
     border-radius: 20px;
     text-align: center;
