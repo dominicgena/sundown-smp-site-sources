@@ -1,4 +1,4 @@
-function initDiscordPage() {
+export function initDiscordPage() {
     const inviteLink = "https://discord.gg/wExHHDzt3z";
     const countdownElem = document.getElementById('countdown');
     const tabTitle = document.getElementById('tabbar-title');
@@ -22,6 +22,3 @@ function initDiscordPage() {
         }
     }, 1000);
 }
-
-// Run immediately since we don't need external data anymore
-document.addEventListener('DOMContentLoaded', initDiscordPage);

@@ -4,7 +4,7 @@ import { Gallery } from './gallery.js'
 import { Content } from './content.js'
 import { Config } from './config.js'
 
-async function initSite() {
+export async function initSite() {
     const config = await getConfig('src/data/config.json')
     const content = new Content(config.web.title, config.server.version, config.web.navigation, config.server.ip, config.web.staff)
     const imgCdnBase = "https://cdn.jsdelivr.net/gh/dominicgena/sundown-image-uploads@main/img/"
@@ -19,5 +19,3 @@ async function initSite() {
     configHandler(personalization, config.web.logo)
     syncSlideshowWithGalleryVisibility('.gallery-container', slideshow, personalization)
 }
-
-document.addEventListener('DOMContentLoaded', initSite)
