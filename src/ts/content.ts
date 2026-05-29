@@ -2,6 +2,7 @@ interface NavOption {
     name: string
     url: string
     target: string
+    category?: string
 }
 
 class Header {

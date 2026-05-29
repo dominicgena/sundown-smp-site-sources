@@ -114,6 +114,14 @@ div p {
     padding-bottom: 15px;
 }
 
+.category-toggle {
+    display: none; /* Hide the dropdown buttons on desktop */
+}
+
+.nav-category, .category-list {
+    display: contents; /* Magically strips the parent containers visually, making list items flow horizontally as siblings! */
+}
+
 .logo {
     z-index: 2;
 }
