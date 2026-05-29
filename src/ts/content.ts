@@ -19,9 +19,17 @@ class Header {
         const titleElem = document.getElementById('server-title') as HTMLDivElement
         const versionElem = document.getElementById('version') as HTMLDivElement
         const navList = document.getElementById('nav-list') as HTMLUListElement
+        const navbarDropBtn = document.getElementById('navbar-drop') as HTMLButtonElement
 
         if (titleElem) titleElem.innerText = this.title
         if (versionElem) versionElem.innerText = this.version
+
+        if (navbarDropBtn && navList) {
+            navbarDropBtn.addEventListener('click', () => {
+                navList.classList.toggle('show');
+                navbarDropBtn.classList.toggle('active');
+            });
+        }
 
         // loop through the options passed in the constructor and put them in the nav bar
         this.options.forEach((option: NavOption) => {

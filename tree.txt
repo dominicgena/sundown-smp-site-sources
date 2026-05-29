@@ -1,0 +1,2493 @@
+DIRECTORY: /home/dominic/Desktop/work/projects/sundown-smp-site-sources
+TREE:
+.
+├── discord.html
+│       |
+│          ** CONTENT **
+│             <!DOCTYPE html>
+│             <html lang="en">
+│             <head>
+│                 <meta charset="UTF-8">
+│                 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+│                 <title id="tabbar-title">Sundown SMP | Joining...</title>
+│                 <link rel="stylesheet" href="src/css/discord.css">
+│                 <link rel="icon" type="image/x-icon" href="assets/ui/favicon.png">
+│             </head>
+│             <body>
+│                 <main class="landing-container">
+│                     <div class="branding">
+│                         <h1 class="visually-hidden">Sundown SMP</h1>
+│                         <img src="assets/ui/sundown_beach.avif" alt="Sundown SMP Logo" class="main-logo">
+│                     </div>
+│             
+│                     <div class="join-card">
+│                         <h2>Joining Discord...</h2>
+│                         <p>Redirecting in <span id="countdown">5</span> seconds.</p>
+│                         <a href="https://discord.gg/wExHHDzt3z" class="manual-btn">JOIN MANUALLY</a>
+│                     </div>
+│                 </main>
+│             
+│                 <script class="entrypoint" src="dist/discord.js" type="module"></script>
+│             </body>
+│             </html>
+├── .git/
+├── .gitignore
+│       |
+│          ** CONTENT **
+│             .vscode/
+│             node_modules/
+├── index.html
+│       |
+│          ** CONTENT **
+│             <!DOCTYPE html>
+│             <html>
+│                 <head>
+│                     <meta charset="UTF-8">
+│                     <meta name="color-scheme" content="dark light">
+│                     <meta name="description" content="The official website for Sundown SMP - a vanilla community-driven Minecraft survival multiplayer server.">
+│                     <meta name="keywords" content="Minecraft, SMP, Sundown SMP, Survival, Multiplayer, Server">
+│                     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+│                     <title>Sundown SMP</title>
+│                     <link rel="icon" type="image/x-icon" href="assets/ui/favicon.png">
+│                     <link rel="stylesheet" href="/src/css/global.css">
+│                 </head>
+│                 <body>
+│                     <header class="header global" id="header">
+│                         <div>
+│                             <a href="index.html" class="title-group">
+│                                 <div id="server-title">Sundown SMP</div>
+│                                 <div id="version">Loading version ...</div>
+│                             </a>
+│             
+│                             <button id="navbar-drop"><?xml version="1.0" encoding="UTF-8"?>
+│                                 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64px" height="32px" viewBox="0 0 64 32" version="1.1">
+│                                     <g id="surface1">
+│                                         <path style=" stroke:none;fill-rule:nonzero;fill:rgb(92.54902%,92.54902%,92.54902%);fill-opacity:1;" d="M 3.71875 -0.375 C 7.261719 -0.328125 8.839844 1.230469 11.246094 3.675781 C 11.660156 4.113281 12.074219 4.550781 12.5 5 C 13.136719 5.582031 13.78125 6.15625 14.4375 6.71875 C 14.753906 6.996094 15.074219 7.273438 15.398438 7.558594 C 17.042969 8.964844 18.699219 10.363281 20.355469 11.753906 C 21.921875 13.078125 23.476562 14.410156 25.015625 15.765625 C 25.351562 16.058594 25.6875 16.351562 26.03125 16.65625 C 26.6875 17.226562 27.335938 17.804688 27.988281 18.378906 C 28.285156 18.640625 28.585938 18.902344 28.890625 19.171875 C 29.15625 19.40625 29.417969 19.636719 29.6875 19.878906 C 30.578125 20.558594 31.484375 21.027344 32.5 21.5 C 32.90625 21.117188 33.3125 20.738281 33.726562 20.34375 C 36.78125 17.496094 39.867188 14.753906 43.125 12.140625 C 44.894531 10.671875 46.570312 9.117188 48.25 7.554688 C 50.394531 5.566406 52.628906 3.71875 54.910156 1.890625 C 56.015625 1.015625 56.015625 1.015625 57 0 C 58.375 -0.132812 58.375 -0.132812 60 -0.125 C 60.535156 -0.128906 61.074219 -0.128906 61.625 -0.132812 C 63 0 63 0 64 1 C 64.457031 2.914062 64.449219 4.585938 64 6.5 C 62.59375 8.335938 60.847656 9.621094 59 11 C 58.089844 11.734375 57.183594 12.476562 56.28125 13.21875 C 55.824219 13.589844 55.363281 13.960938 54.894531 14.34375 C 53.472656 15.523438 52.109375 16.75 50.75 18 C 48.519531 20.054688 46.210938 21.980469 43.851562 23.882812 C 42.480469 25.015625 41.160156 26.183594 39.84375 27.375 C 39.433594 27.742188 39.023438 28.109375 38.601562 28.492188 C 37.949219 29.089844 37.308594 29.699219 36.695312 30.335938 C 35.308594 31.71875 34.054688 32.246094 32.15625 32.46875 C 28.492188 32.28125 26.445312 29.445312 24 27 C 23.105469 26.25 22.199219 25.507812 21.28125 24.78125 C 19.285156 23.171875 17.378906 21.496094 15.5 19.75 C 13.1875 17.597656 10.800781 15.582031 8.335938 13.601562 C 6.535156 12.117188 4.8125 10.550781 3.09375 8.972656 C 2.042969 7.980469 2.042969 7.980469 0.867188 7.296875 C 0 6.5 0 6.5 -0.230469 5.183594 C -0.214844 4.703125 -0.203125 4.21875 -0.1875 3.71875 C -0.179688 3.234375 -0.175781 2.75 -0.167969 2.25 C 0.15625 -0.164062 1.566406 -0.230469 3.71875 -0.375 Z M 3.71875 -0.375 "/>
+│                                         <path style=" stroke:none;fill-rule:nonzero;fill:rgb(7.450981%,7.450981%,7.450981%);fill-opacity:1;" d="M 3 2.5 C 4.824219 2.234375 5.429688 2.449219 6.953125 3.546875 C 7.484375 4.015625 8.011719 4.488281 8.53125 4.96875 C 9.101562 5.476562 9.675781 5.980469 10.25 6.484375 C 10.683594 6.867188 10.683594 6.867188 11.125 7.257812 C 12.90625 8.769531 14.820312 10.109375 16.71875 11.464844 C 18.039062 12.53125 18.957031 13.667969 20 15 C 20.929688 15.785156 20.929688 15.785156 21.90625 16.4375 C 23.328125 17.460938 24.566406 18.519531 25.78125 19.78125 C 27.417969 21.453125 28.980469 22.804688 31 24 C 33.40625 23.9375 34.6875 22.605469 36.3125 21 C 36.84375 20.496094 37.375 19.988281 37.90625 19.484375 C 38.175781 19.234375 38.441406 18.984375 38.714844 18.722656 C 39.859375 17.667969 41.066406 16.691406 42.28125 15.71875 C 44.644531 13.816406 46.878906 11.804688 49.109375 9.75 C 50.964844 8.082031 52.894531 6.515625 54.84375 4.953125 C 55.984375 4.0625 55.984375 4.0625 56.773438 3.128906 C 58.132812 1.953125 59.789062 2.414062 61.5 2.5 C 61.746094 3.488281 61.746094 3.488281 62 4.5 C 61.671875 4.785156 61.671875 4.785156 61.335938 5.070312 C 59.480469 6.683594 57.652344 8.316406 55.851562 9.984375 C 53.722656 11.957031 51.578125 13.871094 49.3125 15.6875 C 46.785156 17.71875 44.429688 19.898438 42.074219 22.125 C 39.945312 24.125 37.738281 25.957031 35.398438 27.707031 C 34.367188 28.484375 34.367188 28.484375 34 30 C 32.308594 30.132812 31.289062 30.167969 29.804688 29.300781 C 29.425781 28.976562 29.046875 28.648438 28.65625 28.3125 C 28.226562 27.945312 27.796875 27.582031 27.351562 27.203125 C 25.515625 25.570312 23.699219 23.914062 21.890625 22.25 C 20.550781 21.046875 19.183594 19.910156 17.78125 18.78125 C 15.222656 16.714844 12.808594 14.523438 10.398438 12.289062 C 9.207031 11.191406 8.003906 10.121094 6.78125 9.0625 C 6.472656 8.792969 6.164062 8.519531 5.847656 8.242188 C 5.296875 7.761719 4.746094 7.289062 4.183594 6.820312 C 3.46875 6.1875 3.46875 6.1875 2.5 5 C 2.59375 3.59375 2.59375 3.59375 3 2.5 Z M 3 2.5 "/>
+│                                     </g>
+│                                 </svg>
+│                             </button>
+│                         </div>
+│                         <nav class="nav-menu" id="nav-menu">
+│                             <ul id="nav-list"></ul>
+│                         </nav>
+│                     </header>
+│             
+│                     <div class="background-slideshow">
+│                         <img id="layer-current" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" class="background-image"><img id="layer-next" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" class="background-image">
+│                     </div>
+│             
+│                     <div class="logo" id="smp-logo">
+│                          <a href="index.html"><img id="logo-image" src="/assets/ui/sundown_mountains1.avif" alt="SMP logo"></a>
+│                     </div>
+│             
+│                     <div class="personalization-config global">
+│                         <button id="btn-cog" class=btn-cog><svg viewBox="0 0 64 64"xmlns=http://www.w3.org/2000/svg><image data-name="settings (1)"height=64 href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAALvUlEQVR4nM1be2xb1Rn/7vUzTmI7SZ1XE+fRNsuLpqYtXZs20IrHaPdIGbCNCQ1roE2apkrWJk37Y39tmkDD0oaEBKIyE9AJxqvbqjFBK5aSPoDiJoOQNkkbt3mQxE7iJH7b906fexzZ1/fG5zgO8JMsJfee832/33fvPY/vnMPBBsPhcqsBwAIA5QBQBgDFAGAAAA0AqIn3OADEACAIAAEAWACAeQCYc9pt8Y1kuCEBcLjcpQDQBACNAFAJAHyepgQAmAWAcQC47rTblgtMtXABcLjcaKsBADoAYHOh7EowCQCfAYDHabeJhTBYkAA4XO6tALATAEy0dTYZdYZdW8q24N8fjy2MeZciQQaXfgC45LTbRvMinIZ1BcDhcuO3fQD10JTf0VhWu79t04FKk66lSKeq4TlOhdcFUUyEIonpWX/k6gefe89eHl+YoqTgBYCzTrttLl8NeQXA4XIj8TsAoJPWxk/vbj6yrabkkEbFl6xVLpYQVkamV84cf+/aKUo6+Cl8CgAfOu22BGWdVTAHwOFyGwHgHgCooK1z7EjLj60WQw+LH89coO8vp0ZeYajiA4B3nXbbEosfptbZ4XLXAsBRFvFP3N38HVbxiAZLcQ/WZaiCnI4SjtSgDoDD5cZu7TAA6Gjr7NxSVretpuQgC6F0YF20wVAFuR0mXKlA9Qk4XG5srQ9Jy/+g27p/c0XR1lK9ugq/bZETE9GYsOIPxqavTK4MtNaV7rBuMhzIQ/sqbniDZ4cnli+3bi7tMhrUNVoNX8KJnArbiuVwfGbSFxx5tf9mv6QatgtnnHbbWC77OQPgcLnrAeC+9LflyM7art1by4+UFqkblOqJAKIoiDGe57SUWmUhCGKU4zkNtwbX5VDc89Ho/KlTl6YG0i7jIOo/Trvt5lr21wyAw+XGoWsvGbYm8eidjYe2N5h6eZ6j/hS+DAiCGBkY97/9ct/4mTR3OLx+22m3LShRUGwDHC63hjz5VfEP7avf29VofvDrJh6BnHY0mR98cF/d3rTLSQ1Ei3y9NWx2A4Ax9c/2BnP17c1lvRwHqoKxLjCQ287m8l7kmmbZSLTIQjYADpfbCgAt6dfu6rQc1Kp589dVfArIsafDIu15WoimLGQFgExf90uvV5n0nRvIu6CoMes7ZOztJ9oyIPcGoNCM4epdHZUteq2Karz/dYBeq7Lc2VHZIqFSQrRlICMiDpcbu6wd0kJVZp2lELpicXHZH4x6cJwQiMT9kZgQwes6Da8r1qlNJoOmxmTQNmjUXOl6fRHOVyWXdzhc7iGn3RZNXZC+Em34GUmN6TQq/XrILAZiY1emlvr/fu7mOVGENefxHAfcQ/vq932j1thtLtZsydenXp6zlmhcHS+sBoAkNGS/83hCiOVDIhITfJevL5x67VzWSE0RGKDXbo3s+nGk2dVoPqLT8OWsvmPKnDsdLvdgKqGS3gbUk3xdFiZ8Idr5+SoWA7HR598be4pFvBSv9t/44Pn3xp5EW6x1J5U5FxOtSaQHYJuSsb6hudFQJD5D63x+JTr8xzeHnh6fCSxSM1YA2kBbCyvRYdo6oWj8C+S8RpFVrckAOFxuPj0qcvAuR6meQiAcn3j65JVn4glRoCWcC2jrTyevPBMIxydpynuXorkmQfVE8+obUC3X+CHu3l7V/tvvtx+rqzDsyeUYJy5vXJg4Ho4lCp7KRptvXJh4AX3kKotckTNyVyiiJZozApCFxw423XfvjuqfVZRq2zkuq8fIwk1f8MLA+CJze0ELtI0+chVHrsgZuaMGhWIZAaiS3v3hfuuBTqupV8VzVF1gQhBCb1+c/GcBdK6Jkx9O/Qt90ZRF7p1W0/dQi8ztpOZUAMrS7+zeWm69vcn8AMfRZ4zmlqJDN7xBpnxcPvDMBfzepegQbVWcIKGWXVvKpW1cUjNP+v+Moe/Bzsr7VSrewMJvaj40UmCtyr4W2HyhlkO3VR6WXC5B7bx0NNhpNVVvMuqUGg9ZiKIYf/38zT6WOuvB6+cmzqJPFhOoCbVJLqsxABnze1uTuZ32u08hHBPmIzGBOSefL7BHiMQExSyPHFATapPcUvHStJjRoGWe9UXjwsrGyVX0ybxQKqONywqAVs0XsRpOUPTNhUZCEJnnJzLauKxWPiGwT3x4jlPMuW0UOI7LOS6h0caT9PEqApGEn9WwRsXWZhQC+fiU0SZkBWB8NjBGFhaoodeqyljKFwJ5+BSJtqwAZLTepwdnhpdCcQ+LZRXPGe6/vaZro8RKgb7QJ0udpVDMg9oklxM8WVLOaMRGp5fPs5LaWlXSylonX2ytLmljrCqOTq9INUVRe6oRzJi3v9LneX96Mfwxi4cq85eXNa4yyWZ9FYFaUJPkflJzKgBZOyxeen/8xKw/MqBsNhNFOlWlwqSjoPjRAWsP+qK1OesPX37p/fG/ydxKak4F4Avp3ZnFcOD46Wsvjn2x8m5CEKlmX7dZTfepVdlda6GgVfN8Z73pXhpziYQYQu7HT1//K2qRKZLUnCI7Kdfy48alZ98Zff1E342nvEuR/+Vyivn4Y0dafrJRAfjl4W2PoY9c5ZDribM3nkLuCpuvRKL5VgCcdluY7MeTBW5aUlP2uzXlRXseO9hE9ZRYgDZry4vuoKmCXHNstJolmjPm+4o5v/Z6Y6WxSNNI4xzX8TGRYj+kmIlhhv1Q07fQJu2GDmORpqGtzrjWm7KqNT0AY9JBUQrtdcYtPE8/3MUkRKfV9MCvelsfL9KqmIesKWDdX/e2PtFpNR1lWZXGTRkd9UalRRWBaL1VNvUHeSVk3wKDTs006Eihxqzf/buHO/6Am51UPEe9Iw3LYh2sW23W78rHt0Gnll3jQI2p1x8hfTqD0mVxRFwQ857r43J1a53x279/5LYe33Lk81l/xNP3+dwl6ZpBY1WxuafNsrPSpGuoKNW1adW8UdlqbsQTigmTwfR/MgLgtNvmHS73NQBoTr8eDMfluhEmoKCasqI9+OtqND8cT4jBhCgmF0dVHKdTq9iGtrkQiMTlWv9rqDH9glyf/ZG0Legf9g4lBIFlL29OoGCdmi/DX6HFI9dzw15p4lQg2jKQFQCn3eZPXz2FZMY3EphfZl+f+6rgW46OIGeJ+wGibe0AELil84MBz+IHoghfWt4vXyDHQY9fuiC7SDRlQTYA5JTGmfRP4d+fTA9Mzodyrsp81UCOyDWNhkA2Tco2iorjdqfdhlvRMyL58n/H35hbigwq1fmqgdyQo4RGP9EiC5qdot3kFEgSFqOu+JGehqN1FUV7+TzychsBQRTjE77Q+RN9nrck3/5nTrttzf0JOUdXe3t/PkGWkZIpqGAkEbt41TfIcZynRK9WadW8QbKOIIajCe/UQvgTURSjeq2Keme5HHCvwcJKdFSj4nXqW6tVqw8tGhcW55Yin5674nvzRJ/nNHJLM4Hded/5k8+taZ92szRPNks3y93vabdss5h0FaIAwow/7O0f9qJzeLi7vnvPtopH13EyRbw44nuJbJmB7tZNzVUm/SaOB37OH/H1Dc0pLZFdI999zj0K1MTIGiImPJhSX7852vYLi0m3naVOCrP+8MCTbw0/y1htmByjoUrs5nNiBFNf36Q9a1BfYTA+fk/zsRK9mmXfP6yE4xMvvHvtzzd91CvO+LQvOO22T1n8MO/7PX/yuVnSLtTSHJ5YCsUi8yvRkUaLYTNte7AYiI68dXHyxZHpZR8lLQzSO0677Tpl+VXkfWqM7MDexXpwqrHSsNugVdfI3Q9G49Pjs8GP8jgw9bHTbstrK9+6zw06XO5ycoJMdjOyHL57x+adVUZdrU6rSq7VRaKJ0MxSZOofH05eYnB9g5wUm6coq4hCnhzFTG0XOS67UWeSRXKMFsf1iik8FhScqMPlLiY5hWaW02U54CNd21Wn3bbuqXk6NvT0uMPlLiHniKvJ6VIzRcObIJMXL0ldTzrttg3bf7Dhx+fTQcYS+N3jW4KNaCrPiA0Y/vDphgp1MDonAOD/5TBqTKqSE2IAAAAASUVORK5CYII="width=64 /></svg></button>
+│             
+│                         <div class="cog-dropdown">
+│                             <h3 class="menu-header">Slideshow Transition Interval</h3>
+│                             <div id="form-container">
+│                                 <form class="personalize" id="personalize-form" action="assets/js/main.js">
+│                                     <label for="transitions-disabled"><input id="transitions-disabled" name="interval-rad" value="0" type="radio">
+│                                         <span class="radio-custom transitions-disabled"></span>&nbsp;Disabled
+│                                     </label><br>
+│                                     <label for="10s">
+│                                         <input id="10s" name="interval-rad" value="10" type="radio" checked>
+│                                         <span class="radio-custom 10s"></span>&nbsp;10 Seconds (Default)
+│                                     </label><br>
+│                                     <label for="15s">
+│                                         <input id="15s" name="interval-rad" value="15" type="radio">
+│                                         <span class="radio-custom 15s"></span>&nbsp;15 Seconds
+│                                     </label><br>
+│                                     <label for="30s">
+│                                         <input id="30s" name="interval-rad" value="30" type="radio">
+│                                         <span class="radio-custom 30s"></span>&nbsp;30 Seconds
+│                                     </label><br>
+│                                     <label for="45s">
+│                                         <input id="45s" name="interval-rad" value="45" type="radio">
+│                                         <span class="radio-custom"></span>&nbsp;45 Seconds
+│                                     </label><br>
+│                                     <label for="60s">
+│                                         <input id="60s" name="interval-rad" value="60" type="radio">
+│                                         <span class="radio-custom 60s"></span>&nbsp;60 Seconds
+│                                     </label><br>
+│                                     <div id="logo-selection">
+│                                         <h3>Logo</h3>
+│                                     </div>
+│                                 </form>
+│                             </div>
+│                         </div>
+│                     
+│                     </div>
+│             
+│                     <div class="gallery-container content content-box toggleable">
+│                         <h1>Sundown SMP - Gallery</h1>
+│                         <div class="gallery">
+│                             <button class ="cycle-img" id="previous-image"><svg width="16" height="8" viewBox="0 0 16 8" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path style="fill: rgb(235, 235, 235); --darkreader-inline-fill: var(--darkreader-text-ebebeb, #dbd8d4);" d="M0.9 -0.1c0.9 0 1.3 0.4 1.9 1l0.3 0.3c0.2 0.2 0.3 0.3 0.5 0.4l0.2 0.2q0.6 0.5 1.2 1a76 76 0 0 1 1.2 1q0.1 0.1 0.3 0.2c0.2 0.1 0.3 0.3 0.5 0.4l0.2 0.2 0.2 0.2c0.2 0.2 0.4 0.3 0.7 0.4l0.3 -0.3c0.8 -0.7 1.5 -1.4 2.3 -2.1 0.4 -0.4 0.9 -0.8 1.3 -1.1 0.5 -0.5 1.1 -1 1.7 -1.4 0.3 -0.2 0.3 -0.2 0.5 -0.5 0.3 0 0.3 0 0.8 0l0.4 0c0.3 0.2 0.3 0.2 0.6 0.2a2.8 2.8 0 0 1 0 1.4c-0.4 0.5 -0.8 0.8 -1.3 1.1q-0.3 0.3 -0.7 0.6 -0.2 0.1 -0.3 0.3a27 27 0 0 0 -1.6 1.3c-0.6 0.5 -1.1 1 -1.7 1.5a29.5 29.5 0 0 0 -1 0.9q-0.2 0.1 -0.3 0.3a11 11 0 0 0 -0.5 0.5c-0.3 0.3 -0.7 0.5 -1.1 0.5 -0.9 0 -1.4 -0.8 -2 -1.4q-0.3 -0.3 -0.7 -0.6a27.5 27.5 0 0 1 -1.4 -1.1 32.5 32.5 0 0 0 -1.8 -1.5 33 33 0 0 1 -1.3 -1.2c-0.3 -0.2 -0.3 -0.2 -0.6 -0.4c-0.3 -0.2 -0.3 -0.2 -0.4 -0.5l0 -0.4c0 -0.1 0 -0.2 0 -0.4c0 -0.1 0.4 -0.1 0.9 -0.1" data-darkreader-inline-fill=""></path></g></svg></button>
+│                             <div id="image-view"><img id="active-gallery-image"></div>
+│                             <button class ="cycle-img" id="next-image"><svg width="16" height="8" viewBox="0 0 16 8" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path style="fill: rgb(235, 235, 235); --darkreader-inline-fill: var(--darkreader-text-ebebeb, #dbd8d4);" d="M0.9 -0.1c0.9 0 1.3 0.4 1.9 1l0.3 0.3c0.2 0.2 0.3 0.3 0.5 0.4l0.2 0.2q0.6 0.5 1.2 1a76 76 0 0 1 1.2 1q0.1 0.1 0.3 0.2c0.2 0.1 0.3 0.3 0.5 0.4l0.2 0.2 0.2 0.2c0.2 0.2 0.4 0.3 0.7 0.4l0.3 -0.3c0.8 -0.7 1.5 -1.4 2.3 -2.1 0.4 -0.4 0.9 -0.8 1.3 -1.1 0.5 -0.5 1.1 -1 1.7 -1.4 0.3 -0.2 0.3 -0.2 0.5 -0.5 0.3 0 0.3 0 0.8 0l0.4 0c0.3 0.2 0.3 0.2 0.6 0.2a2.8 2.8 0 0 1 0 1.4c-0.4 0.5 -0.8 0.8 -1.3 1.1q-0.3 0.3 -0.7 0.6 -0.2 0.1 -0.3 0.3a27 27 0 0 0 -1.6 1.3c-0.6 0.5 -1.1 1 -1.7 1.5a29.5 29.5 0 0 0 -1 0.9q-0.2 0.1 -0.3 0.3a11 11 0 0 0 -0.5 0.5c-0.3 0.3 -0.7 0.5 -1.1 0.5 -0.9 0 -1.4 -0.8 -2 -1.4q-0.3 -0.3 -0.7 -0.6a27.5 27.5 0 0 1 -1.4 -1.1 32.5 32.5 0 0 0 -1.8 -1.5 33 33 0 0 1 -1.3 -1.2c-0.3 -0.2 -0.3 -0.2 -0.6 -0.4c-0.3 -0.2 -0.3 -0.2 -0.4 -0.5l0 -0.4c0 -0.1 0 -0.2 0 -0.4c0 -0.1 0.4 -0.1 0.9 -0.1" data-darkreader-inline-fill=""></path></g></svg></button>
+│                         </div>
+│                         <h3 id="image-description"></h3>
+│                     </div>
+│             
+│                     <div class="content-box join toggleable">
+│                         <div class="content">
+│                             <h1>Join Instructions</h1><br>
+│                             <p>To join this server, first ensure that you've read the <a href="#rules">rules</a></p>
+│                             <p>When done, click <a href="https://discord.gg/RSqph2a46T" class="server-invite-link" target="_blank">here</a> to fill an application and confirm that you have read rules!</p>
+│                         </div>
+│                     </div>
+│             
+│                     <div class="content content-box rules toggleable">
+│                         <div>
+│                             <div class="flex-table">
+│                                 <h1>Server Rules</h1>
+│                                 
+│                                 <div class="table-item first">
+│                                     <div class="item-content">
+│                                         <h2>Whitelist Application</h2>
+│                                         <p class="elaboration">
+│                                             You MUST submit an application to be whitelisted. Applying is handled via the <strong>⁠╰☑-𝐚𝐩𝐩𝐥𝐲</strong> channel. If you're having trouble with the process, please DM or @ an admin for assistance.
+│                                         </p>
+│                                     </div>
+│                                 </div>
+│             
+│                                 <div class="table-item">
+│                                     <div class="item-content">
+│                                         <h2>Griefing & PVP</h2>
+│                                         <p class="elaboration">
+│                                             Absolutely no griefing or PVP against players who have not consented. Consent is strictly recorded in the <strong>⁠│✻-𝐫𝐨𝐥𝐞𝐬</strong> channel. Respect the boundaries of your fellow players at all times.
+│                                         </p>
+│                                     </div>
+│                                 </div>
+│             
+│                                 <div class="table-item">
+│                                     <div class="item-content">
+│                                         <h2>Respect & Conduct</h2>
+│                                         <p class="elaboration">
+│                                             All Discord server rules and TOS apply here. We expect maturity from our members; if your behavior frequently makes others uncomfortable and you fail to correct it, we maintain a zero-tolerance policy to ensure everyone feels safe.
+│                                         </p>
+│                                     </div>
+│                                 </div>
+│             
+│                                 <div class="table-item">
+│                                     <div class="item-content">
+│                                         <h2>World Integrity</h2>
+│                                         <p class="elaboration">
+│                                             Please do not attempt to acquire the world seed. It is hidden to prevent unfair advantages. Any unauthorized knowledge of the seed is considered an intellectual property violation and will result in consequences.
+│                                         </p>
+│                                     </div>
+│                                 </div>
+│             
+│                                 <div class="table-item">
+│                                     <div class="item-content">
+│                                         <h2>Conflict Resolution</h2>
+│                                         <p class="elaboration">
+│                                             Policy applies on a report basis. Please try to resolve conflicts personally first, but if efforts are ineffective, communicate the issue to <strong>@Starlings</strong>, <strong>@Super Nova</strong>, or <strong>@SMP Owner</strong>. You can get in contact with these people by expanding the "staff" section in the footer of this page.
+│                                         </p>
+│                                     </div>
+│                                 </div>
+│             
+│                                 <div class="table-item">
+│                                     <div class="item-content">
+│                                         <h2>Enforcement</h2>
+│                                         <p class="elaboration">
+│                                             Community safety is our top priority. Offenses are recorded, and while punishment depends on the violation, severity increases with repeated infractions. We will take any action necessary to keep the community safe.
+│                                         </p>
+│                                     </div>
+│                                 </div>
+│                             </div>
+│                             <div id="rules-join-link">
+│                                 <a href="https://discord.gg/RSqph2a46T" class="server-invite-link" target="_blank"><h1 id="rules-conclusion">Join</h1></a>
+│                                 <p>The last rule is to join!</p>
+│                             </div>
+│                         </div>
+│                     </div>
+│             
+│                     <div class="content-box home">
+│                         <div class="content welcome-message">
+│                             <h1>Welcome to Sundown SMP</h1><br>
+│                             <p class="welcome-message">An <em>18+</em> vanilla SMP server valuing talent, creativity, and community engagement in its members.</p>
+│                         </div><br>
+│                         <div class="content">
+│                             <h1><em>Server Overview</em></h1>
+│                             <p>Sundown SMP is a small, chill Vanilla Survival Multiplayer (SMP) Server. We prioritize preservation of the Minecraft experience, meaning there's no 
+│                                 annoying in game command-based economy replacing what diamonds are perfectly capable of providing while encouraging community engagement and socialization.
+│                                 Our community's top priority is to provide a safe space for <em>all</em> players.
+│                             </p>
+│                         </div>
+│             
+│                         <div class="content flex-table">
+│                             <h1>Server Features</h1>
+│                             <div class="table-item first">
+│                                 <div class="item-content">
+│                                     <h2>Creativity</h2>
+│                                     <p class="elaboration">We are a community that possesses great appreciation in creativity and artistic talent. Talent is not a requirement to join, but it is an asset that
+│                                         will improve your sense of belonging in the community!
+│                                     </p>
+│                                 </div>
+│                             </div>
+│                             <div class="table-item">
+│                                 <div class="item-content">
+│                                     <h2>Technical Reliability</h2>
+│                                     <p class="elaboration">While technical issues always reserve the ability to arise, the server runs in a dockerized environment where automatic world backups are performed every two hours. Performance is great because this environment is optimized for hosting.
+│                                     </p>
+│                                 </div>
+│                             </div>
+│                             <div class="table-item">
+│                                 <div class="item-content">
+│                                     <h2>Vanilla</h2>
+│                                     <p class="elaboration">We like to preserve the authentic Minecraft experience. That means no weird command-based economies, teleporting systems, or heavy mods unfaithful to the vanilla experience. The diamond economy is the best economy!
+│                                     </p>
+│                                 </div>
+│                             </div>
+│                             <div class="table-item">
+│                                 <div class="item-content">
+│                                     <h2>All Styles Welcome</h2>
+│                                     <p class="elaboration">Whether your a builder, redstoner, technical farm builder, or PVPer, your skills combined with your respect and engagement secure you a seat here.
+│                                     </p>
+│                                 </div>
+│                             </div>
+│                             <div class="table-item">
+│                                 <div class="item-content">
+│                                     <h2>Community and Support</h2>
+│                                     <p class="elaboration">The server has Simple Voice Chat installed, and players are encouraged (but not forced!) to use it. It also has Geyser and Floodgate installed; allowing it to support both Java and Bedrock players.
+│                                     </p>
+│                                 </div>
+│                             </div>
+│                             <div class="table-item">
+│                                 <div class="item-content">
+│                                     <h2>Bluemap</h2>
+│                                     <p class="elaboration">Bluemap allows players and non-players to view a 3D map of the server from inside any browser. If you'd like to see this map, click <a target="_blank" href="https://map.sundown.social/#world:9021:311:-6087:81:0:0:0:0:perspective">here</a>.</p>
+│                                 </div>
+│                             </div>
+│                             <div class="table-item">
+│                                 <div class="item-content">
+│                                     <h2>Safety</h2>
+│                                     <p class="elaboration">Safety is our priority. We have zero tolerance for behavior or speech that undermines our community. Rules apply to both the SMP and Discord; discrimination and hate-speech results in an immediate, permanent ban. We rely on mutual accountability to keep this space comfortable. If you’re here to contribute to a safe environment, welcome!
+│                                     </p>
+│                                 </div>
+│                             </div>
+│                             <div class="table-item">
+│                                 <div class="item-content">
+│                                     <h2>Maturity</h2>
+│                                     <p class="elaboration">Our server is 18+. Please note that until we happen to specify that there are no minors in the server, some of our members are minors. <em>However</em>, we are no longer accepting minors and are strict that all new applicants must be 18 or older without exception. The server will have a few 16+ minors until they either turn 18 or leave at their free will.
+│                                     </p>
+│                                 </div>
+│                             </div>
+│                         </div>
+│                     </div>
+│             
+│                     <div class="content-box home">
+│                         <div class="content flex-table">
+│                             <h1>Frequently Asked Questions</h1>
+│                             <div class="table-item first">
+│                                 <div class="item-content">
+│                                     <h2>How old do I have to be to join?</h2>
+│                                     <p class="elaboration">To join Sundown SMP, you must be 18+. <em>However,</em> explicit content is forbidden, and will result in a ban. Note that we recently transitioned to 18+ on a soft policy, so some members are 16+ until they either turn 18, or leave willingly.
+│                                     </p>
+│                                 </div>
+│                             </div>
+│                             <div class="table-item">
+│                                 <div class="item-content">
+│                                     <h2>What plugins are on the server?</h2>
+│                                     <p class="elaboration">The server has AxGraves (a graves plugin for preserving items after death), Bluemap (a web map), DiscordSRV (Minecraft chat is bridged into a Discord channel), Geyser and Floodgate (Bedrock client support), interactive chat, SimpleAFK, ViaBackwards and ViaVersion (for universal version support), and Simple Voice Chat (proximity chat).
+│                                     </p>
+│                                 </div>
+│                             </div>
+│                             <div class="table-item">
+│                                 <div class="item-content">
+│                                     <h2>Is voicechat required?</h2>
+│                                     <p class="elaboration">Voicechat is not required, but it's encouraged. Bedrock players will be unable to use voicechat, as it only supports Java clients.
+│                                     </p>
+│                                 </div>
+│                             </div>
+│                             <div class="table-item">
+│                                 <div class="item-content">
+│                                     <h2>How do I apply?</h2>
+│                                     <p class="elaboration">Start by clicking the "Join" button at the top of your page, then follow the onboarding instructions.
+│                                     </p>
+│                                 </div>
+│                             </div>
+│                             <div class="table-item">
+│                                 <div class="item-content">
+│                                     <h2>When will I be accepted</h2>
+│                                     <p class="elaboration">Applications are usually reviewed within one hour, but rarely can take up to 24. If your application isn't responded to within 24 hours, contact support at the bottom of the page.
+│                                     </p>
+│                                 </div>
+│                             </div>
+│                             <div class="table-item">
+│                                 <div class="item-content">
+│                                     <h2>What do I do if I face technical difficulties</h2>
+│                                     <p class="elaboration">Reach out to support via the Discord tickets system, or by contacting anybody listed in the staff section at the bottom of the page.</p>
+│                                 </div>
+│                             </div>
+│                             <div class="table-item">
+│                                 <div class="item-content">
+│                                     <h2>Is Discord required to join the server?</h2>
+│                                     <p class="elaboration">Yes. Discord acts as both a communication platform for members to socialize, and a platform for staff to maintain a clear record of server members. You must be a member of the Discord server to join the SMP.
+│                                     </p>
+│                                 </div>
+│                             </div>
+│                             <div class="table-item">
+│                                 <div class="item-content">
+│                                     <h2>How do I join on console?</h2>
+│                                     <p class="elaboration">See this <a href="https://www.youtube.com/watch?v=AoLPhKW2Xis">tutorial</a>. If you're still unable to join after following the video's instructions, notify a staff member.</p>
+│                                 </div>
+│                             </div>
+│                         </div>
+│                     </div>
+│             
+│                     <footer class="main-footer">
+│                         <div id="footer-server-ip"><h2>Server IP</h2></div>
+│                         <div id="support"><h2>Support</h2><p>Expand staff and reach out to any member by clicking their profile link, or click<a href="https://discord.com/users/1200315477013049414" target="_blank"><span>here</span></a>to contact the SMP owner directly</p></div>
+│                         <div id="legal-and-compliance"><h2>Legal and Compliance</h2>
+│                         <p id="disclaimer">Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft</p></div>
+│                         <br><br><div id="staff-header"><h2>Staff</h2></div>
+│                     </footer>
+│                     
+│                     <script class="entrypoint" src="/dist/main.js" type="module"></script>
+│                 </body>
+│             </html>
+├── package.json
+│       |
+│          ** CONTENT **
+│             {
+│               "name": "sundown-smp-site-sources",
+│               "version": "1.0.0",
+│               "description": "",
+│               "main": "index.js",
+│               "scripts": {
+│                 "test": "echo \"Error: no test specified\" && exit 1"
+│               },
+│               "repository": {
+│                 "type": "git",
+│                 "url": "git+https://github.com/dominicgena/sundown-smp-site-sources.git"
+│               },
+│               "keywords": [],
+│               "author": "",
+│               "license": "ISC",
+│               "bugs": {
+│                 "url": "https://github.com/dominicgena/sundown-smp-site-sources/issues"
+│               },
+│               "homepage": "https://github.com/dominicgena/sundown-smp-site-sources#readme",
+│               "devDependencies": {
+│                 "esbuild": "^0.28.0"
+│               }
+│             }
+
+├── package-lock.json
+│       |
+│          ** CONTENT **
+│             {
+│               "name": "sundown-smp-site-sources",
+│               "version": "1.0.0",
+│               "lockfileVersion": 3,
+│               "requires": true,
+│               "packages": {
+│                 "": {
+│                   "name": "sundown-smp-site-sources",
+│                   "version": "1.0.0",
+│                   "license": "ISC",
+│                   "devDependencies": {
+│                     "esbuild": "^0.28.0"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/aix-ppc64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/aix-ppc64/-/aix-ppc64-0.28.0.tgz",
+│                   "integrity": "sha512-lhRUCeuOyJQURhTxl4WkpFTjIsbDayJHih5kZC1giwE+MhIzAb7mEsQMqMf18rHLsrb5qI1tafG20mLxEWcWlA==",
+│                   "cpu": [
+│                     "ppc64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "aix"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/android-arm": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/android-arm/-/android-arm-0.28.0.tgz",
+│                   "integrity": "sha512-wqh0ByljabXLKHeWXYLqoJ5jKC4XBaw6Hk08OfMrCRd2nP2ZQ5eleDZC41XHyCNgktBGYMbqnrJKq/K/lzPMSQ==",
+│                   "cpu": [
+│                     "arm"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "android"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/android-arm64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/android-arm64/-/android-arm64-0.28.0.tgz",
+│                   "integrity": "sha512-+WzIXQOSaGs33tLEgYPYe/yQHf0WTU0X42Jca3y8NWMbUVhp7rUnw+vAsRC/QiDrdD31IszMrZy+qwPOPjd+rw==",
+│                   "cpu": [
+│                     "arm64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "android"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/android-x64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/android-x64/-/android-x64-0.28.0.tgz",
+│                   "integrity": "sha512-+VJggoaKhk2VNNqVL7f6S189UzShHC/mR9EE8rDdSkdpN0KflSwWY/gWjDrNxxisg8Fp1ZCD9jLMo4m0OUfeUA==",
+│                   "cpu": [
+│                     "x64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "android"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/darwin-arm64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/darwin-arm64/-/darwin-arm64-0.28.0.tgz",
+│                   "integrity": "sha512-0T+A9WZm+bZ84nZBtk1ckYsOvyA3x7e2Acj1KdVfV4/2tdG4fzUp91YHx+GArWLtwqp77pBXVCPn2We7Letr0Q==",
+│                   "cpu": [
+│                     "arm64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "darwin"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/darwin-x64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/darwin-x64/-/darwin-x64-0.28.0.tgz",
+│                   "integrity": "sha512-fyzLm/DLDl/84OCfp2f/XQ4flmORsjU7VKt8HLjvIXChJoFFOIL6pLJPH4Yhd1n1gGFF9mPwtlN5Wf82DZs+LQ==",
+│                   "cpu": [
+│                     "x64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "darwin"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/freebsd-arm64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/freebsd-arm64/-/freebsd-arm64-0.28.0.tgz",
+│                   "integrity": "sha512-l9GeW5UZBT9k9brBYI+0WDffcRxgHQD8ShN2Ur4xWq/NFzUKm3k5lsH4PdaRgb2w7mI9u61nr2gI2mLI27Nh3Q==",
+│                   "cpu": [
+│                     "arm64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "freebsd"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/freebsd-x64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/freebsd-x64/-/freebsd-x64-0.28.0.tgz",
+│                   "integrity": "sha512-BXoQai/A0wPO6Es3yFJ7APCiKGc1tdAEOgeTNy3SsB491S3aHn4S4r3e976eUnPdU+NbdtmBuLncYir2tMU9Nw==",
+│                   "cpu": [
+│                     "x64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "freebsd"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/linux-arm": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/linux-arm/-/linux-arm-0.28.0.tgz",
+│                   "integrity": "sha512-CjaaREJagqJp7iTaNQjjidaNbCKYcd4IDkzbwwxtSvjI7NZm79qiHc8HqciMddQ6CKvJT6aBd8lO9kN/ZudLlw==",
+│                   "cpu": [
+│                     "arm"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "linux"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/linux-arm64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/linux-arm64/-/linux-arm64-0.28.0.tgz",
+│                   "integrity": "sha512-RVyzfb3FWsGA55n6WY0MEIEPURL1FcbhFE6BffZEMEekfCzCIMtB5yyDcFnVbTnwk+CLAgTujmV/Lgvih56W+A==",
+│                   "cpu": [
+│                     "arm64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "linux"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/linux-ia32": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/linux-ia32/-/linux-ia32-0.28.0.tgz",
+│                   "integrity": "sha512-KBnSTt1kxl9x70q+ydterVdl+Cn0H18ngRMRCEQfrbqdUuntQQ0LoMZv47uB97NljZFzY6HcfqEZ2SAyIUTQBQ==",
+│                   "cpu": [
+│                     "ia32"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "linux"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/linux-loong64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/linux-loong64/-/linux-loong64-0.28.0.tgz",
+│                   "integrity": "sha512-zpSlUce1mnxzgBADvxKXX5sl8aYQHo2ezvMNI8I0lbblJtp8V4odlm3Yzlj7gPyt3T8ReksE6bK+pT3WD+aJRg==",
+│                   "cpu": [
+│                     "loong64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "linux"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/linux-mips64el": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/linux-mips64el/-/linux-mips64el-0.28.0.tgz",
+│                   "integrity": "sha512-2jIfP6mmjkdmeTlsX/9vmdmhBmKADrWqN7zcdtHIeNSCH1SqIoNI63cYsjQR8J+wGa4Y5izRcSHSm8K3QWmk3w==",
+│                   "cpu": [
+│                     "mips64el"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "linux"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/linux-ppc64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/linux-ppc64/-/linux-ppc64-0.28.0.tgz",
+│                   "integrity": "sha512-bc0FE9wWeC0WBm49IQMPSPILRocGTQt3j5KPCA8os6VprfuJ7KD+5PzESSrJ6GmPIPJK965ZJHTUlSA6GNYEhg==",
+│                   "cpu": [
+│                     "ppc64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "linux"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/linux-riscv64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/linux-riscv64/-/linux-riscv64-0.28.0.tgz",
+│                   "integrity": "sha512-SQPZOwoTTT/HXFXQJG/vBX8sOFagGqvZyXcgLA3NhIqcBv1BJU1d46c0rGcrij2B56Z2rNiSLaZOYW5cUk7yLQ==",
+│                   "cpu": [
+│                     "riscv64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "linux"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/linux-s390x": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/linux-s390x/-/linux-s390x-0.28.0.tgz",
+│                   "integrity": "sha512-SCfR0HN8CEEjnYnySJTd2cw0k9OHB/YFzt5zgJEwa+wL/T/raGWYMBqwDNAC6dqFKmJYZoQBRfHjgwLHGSrn3Q==",
+│                   "cpu": [
+│                     "s390x"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "linux"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/linux-x64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/linux-x64/-/linux-x64-0.28.0.tgz",
+│                   "integrity": "sha512-us0dSb9iFxIi8srnpl931Nvs65it/Jd2a2K3qs7fz2WfGPHqzfzZTfec7oxZJRNPXPnNYZtanmRc4AL/JwVzHQ==",
+│                   "cpu": [
+│                     "x64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "linux"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/netbsd-arm64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/netbsd-arm64/-/netbsd-arm64-0.28.0.tgz",
+│                   "integrity": "sha512-CR/RYotgtCKwtftMwJlUU7xCVNg3lMYZ0RzTmAHSfLCXw3NtZtNpswLEj/Kkf6kEL3Gw+BpOekRX0BYCtklhUw==",
+│                   "cpu": [
+│                     "arm64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "netbsd"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/netbsd-x64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/netbsd-x64/-/netbsd-x64-0.28.0.tgz",
+│                   "integrity": "sha512-nU1yhmYutL+fQ71Kxnhg8uEOdC0pwEW9entHykTgEbna2pw2dkbFSMeqjjyHZoCmt8SBkOSvV+yNmm94aUrrqw==",
+│                   "cpu": [
+│                     "x64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "netbsd"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/openbsd-arm64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/openbsd-arm64/-/openbsd-arm64-0.28.0.tgz",
+│                   "integrity": "sha512-cXb5vApOsRsxsEl4mcZ1XY3D4DzcoMxR/nnc4IyqYs0rTI8ZKmW6kyyg+11Z8yvgMfAEldKzP7AdP64HnSC/6g==",
+│                   "cpu": [
+│                     "arm64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "openbsd"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/openbsd-x64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/openbsd-x64/-/openbsd-x64-0.28.0.tgz",
+│                   "integrity": "sha512-8wZM2qqtv9UP3mzy7HiGYNH/zjTA355mpeuA+859TyR+e+Tc08IHYpLJuMsfpDJwoLo1ikIJI8jC3GFjnRClzA==",
+│                   "cpu": [
+│                     "x64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "openbsd"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/openharmony-arm64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/openharmony-arm64/-/openharmony-arm64-0.28.0.tgz",
+│                   "integrity": "sha512-FLGfyizszcef5C3YtoyQDACyg95+dndv79i2EekILBofh5wpCa1KuBqOWKrEHZg3zrL3t5ouE5jgr94vA+Wb2w==",
+│                   "cpu": [
+│                     "arm64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "openharmony"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/sunos-x64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/sunos-x64/-/sunos-x64-0.28.0.tgz",
+│                   "integrity": "sha512-1ZgjUoEdHZZl/YlV76TSCz9Hqj9h9YmMGAgAPYd+q4SicWNX3G5GCyx9uhQWSLcbvPW8Ni7lj4gDa1T40akdlw==",
+│                   "cpu": [
+│                     "x64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "sunos"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/win32-arm64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/win32-arm64/-/win32-arm64-0.28.0.tgz",
+│                   "integrity": "sha512-Q9StnDmQ/enxnpxCCLSg0oo4+34B9TdXpuyPeTedN/6+iXBJ4J+zwfQI28u/Jl40nOYAxGoNi7mFP40RUtkmUA==",
+│                   "cpu": [
+│                     "arm64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "win32"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/win32-ia32": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/win32-ia32/-/win32-ia32-0.28.0.tgz",
+│                   "integrity": "sha512-zF3ag/gfiCe6U2iczcRzSYJKH1DCI+ByzSENHlM2FcDbEeo5Zd2C86Aq0tKUYAJJ1obRP84ymxIAksZUcdztHA==",
+│                   "cpu": [
+│                     "ia32"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "win32"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/@esbuild/win32-x64": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/@esbuild/win32-x64/-/win32-x64-0.28.0.tgz",
+│                   "integrity": "sha512-pEl1bO9mfAmIC+tW5btTmrKaujg3zGtUmWNdCw/xs70FBjwAL3o9OEKNHvNmnyylD6ubxUERiEhdsL0xBQ9efw==",
+│                   "cpu": [
+│                     "x64"
+│                   ],
+│                   "dev": true,
+│                   "optional": true,
+│                   "os": [
+│                     "win32"
+│                   ],
+│                   "engines": {
+│                     "node": ">=18"
+│                   }
+│                 },
+│                 "node_modules/esbuild": {
+│                   "version": "0.28.0",
+│                   "resolved": "https://registry.npmjs.org/esbuild/-/esbuild-0.28.0.tgz",
+│                   "integrity": "sha512-sNR9MHpXSUV/XB4zmsFKN+QgVG82Cc7+/aaxJ8Adi8hyOac+EXptIp45QBPaVyX3N70664wRbTcLTOemCAnyqw==",
+│                   "dev": true,
+│                   "hasInstallScript": true,
+│                   "bin": {
+│                     "esbuild": "bin/esbuild"
+│                   },
+│                   "engines": {
+│                     "node": ">=18"
+│                   },
+│                   "optionalDependencies": {
+│                     "@esbuild/aix-ppc64": "0.28.0",
+│                     "@esbuild/android-arm": "0.28.0",
+│                     "@esbuild/android-arm64": "0.28.0",
+│                     "@esbuild/android-x64": "0.28.0",
+│                     "@esbuild/darwin-arm64": "0.28.0",
+│                     "@esbuild/darwin-x64": "0.28.0",
+│                     "@esbuild/freebsd-arm64": "0.28.0",
+│                     "@esbuild/freebsd-x64": "0.28.0",
+│                     "@esbuild/linux-arm": "0.28.0",
+│                     "@esbuild/linux-arm64": "0.28.0",
+│                     "@esbuild/linux-ia32": "0.28.0",
+│                     "@esbuild/linux-loong64": "0.28.0",
+│                     "@esbuild/linux-mips64el": "0.28.0",
+│                     "@esbuild/linux-ppc64": "0.28.0",
+│                     "@esbuild/linux-riscv64": "0.28.0",
+│                     "@esbuild/linux-s390x": "0.28.0",
+│                     "@esbuild/linux-x64": "0.28.0",
+│                     "@esbuild/netbsd-arm64": "0.28.0",
+│                     "@esbuild/netbsd-x64": "0.28.0",
+│                     "@esbuild/openbsd-arm64": "0.28.0",
+│                     "@esbuild/openbsd-x64": "0.28.0",
+│                     "@esbuild/openharmony-arm64": "0.28.0",
+│                     "@esbuild/sunos-x64": "0.28.0",
+│                     "@esbuild/win32-arm64": "0.28.0",
+│                     "@esbuild/win32-ia32": "0.28.0",
+│                     "@esbuild/win32-x64": "0.28.0"
+│                   }
+│                 }
+│               }
+│             }
+
+├── _redirects
+│       |
+│          ** CONTENT **
+│             /discord    /discord.html    200
+│             /home       /index.html    301
+│             /join       /index.html#join    301
+│             /rules       /index.html#rules    301
+│             /map       https://map.sundown.social    301
+│             /gallery    /index.html#gallery 301
+├── robots.txt
+│       |
+│          ** CONTENT **
+│             User-agent: *
+│             Allow: /
+│             Disallow: /assets/data/
+│             Disallow: /assets/js/
+│             
+│             Sitemap: https://sundown.social/sitemap.xml
+├── sitemap.xml
+│       |
+│          ** CONTENT **
+│             <?xml version="1.0" encoding="UTF-8"?>
+│             <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+│               <url>
+│                 <loc>https://sundown.social/discord</loc>
+│                 <lastmod>2026-05-05</lastmod>
+│                 <changefreq>monthly</changefreq>
+│                 <priority>0.8</priority>
+│               </url>
+│             </urlset>
+├── src/
+│   ├── css/
+│   │   ├── discord.css
+│   │   │       |
+│   │   │          ** CONTENT **
+│   │   │             @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+│   │   │             
+│   │   │             :root {
+│   │   │                 --mc-font: 'VT323', monospace;
+│   │   │                 --accent: #ffaa00;
+│   │   │             }
+│   │   │             
+│   │   │             * { box-sizing: border-box; }
+│   │   │             
+│   │   │             body, html {
+│   │   │                 margin: 0;
+│   │   │                 padding: 0;
+│   │   │                 width: 100%;
+│   │   │                 height: 100vh;
+│   │   │                 overflow: hidden; 
+│   │   │                 background: radial-gradient(circle, #1a1a1a 0%, #000000 100%);
+│   │   │                 display: flex;
+│   │   │                 justify-content: center;
+│   │   │                 align-items: center;
+│   │   │             }
+│   │   │             
+│   │   │             .visually-hidden {
+│   │   │                 position: absolute;
+│   │   │                 width: 1px;
+│   │   │                 height: 1px;
+│   │   │                 padding: 0;
+│   │   │                 margin: -1px;
+│   │   │                 overflow: hidden;
+│   │   │                 clip: rect(0, 0, 0, 0);
+│   │   │                 border: 0;
+│   │   │             }
+│   │   │             
+│   │   │             .landing-container {
+│   │   │                 display: flex;
+│   │   │                 flex-direction: column;
+│   │   │                 align-items: center;
+│   │   │                 z-index: 1;
+│   │   │                 width: 100%;
+│   │   │             }
+│   │   │             
+│   │   │             .branding {
+│   │   │                 text-align: center;
+│   │   │                 margin-bottom: 2rem;
+│   │   │             }
+│   │   │             
+│   │   │             .main-logo {
+│   │   │                 width: clamp(280px, 65vw, 520px);
+│   │   │                 height: auto;
+│   │   │                 filter: drop-shadow(0 0 20px rgba(0,0,0,0.8));
+│   │   │             }
+│   │   │             
+│   │   │             .join-card {
+│   │   │                 background: rgba(20, 20, 20, 0.6);
+│   │   │                 padding: 2.5rem;
+│   │   │                 border-radius: 20px;
+│   │   │                 text-align: center;
+│   │   │                 border: 1px solid rgba(255, 255, 255, 0.05);
+│   │   │                 width: 90%;
+│   │   │                 max-width: 420px;
+│   │   │                 box-shadow: 0 20px 50px rgba(0,0,0,0.8);
+│   │   │             }
+│   │   │             
+│   │   │             .join-card h2 { 
+│   │   │                 font-family: var(--mc-font); 
+│   │   │                 font-size: 2.5rem; 
+│   │   │                 margin: 0; 
+│   │   │                 color: white;
+│   │   │                 letter-spacing: 2px;
+│   │   │             }
+│   │   │             
+│   │   │             .join-card p { 
+│   │   │                 color: #999; 
+│   │   │                 margin: 15px 0; 
+│   │   │                 font-size: 1.1rem;
+│   │   │                 font-family: sans-serif;
+│   │   │             }
+│   │   │             
+│   │   │             #countdown { color: var(--accent); font-weight: bold; }
+│   │   │             
+│   │   │             .manual-btn {
+│   │   │                 display: inline-block;
+│   │   │                 margin-top: 10px;
+│   │   │                 padding: 12px 24px;
+│   │   │                 border: 2px solid var(--accent);
+│   │   │                 color: var(--accent);
+│   │   │                 text-decoration: none;
+│   │   │                 font-family: var(--mc-font);
+│   │   │                 font-size: 1.4rem;
+│   │   │                 border-radius: 4px;
+│   │   │                 transition: 0.2s ease-in-out;
+│   │   │             }
+│   │   │             
+│   │   │             .manual-btn:hover { 
+│   │   │                 background: var(--accent); 
+│   │   │                 color: #000;
+│   │   │             }
+│   │   └── global.css
+│   │           |
+│   │              ** CONTENT **
+│   │                 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+│   │                 
+│   │                 :root {
+│   │                     --logo-top-margin: clamp(212px, 24vh, 32vh);
+│   │                     --content-padding: clamp(8px, 3%, 24px);
+│   │                     --content-font-minecraft: 'VT323', 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Console', monospace;
+│   │                     --scheme-bg-color: 70, 54, 114;
+│   │                     --scheme-accent-color: #ffaa00;
+│   │                     --content-font-times: "Times New Roman", Times, serif;
+│   │                 }
+│   │                 
+│   │                 *, *::before, *::after {
+│   │                     box-sizing: border-box;
+│   │                 }
+│   │                 
+│   │                 body {
+│   │                     margin: 0;
+│   │                     padding: 0;
+│   │                     background-color: rgb(31, 31, 31);
+│   │                 }
+│   │                 
+│   │                 div p {
+│   │                     padding: 0 5% 0 5%;
+│   │                     font-family: var(--content-font-times);
+│   │                     margin-top: 0;
+│   │                     font-size: 2vh;
+│   │                 }
+│   │                 
+│   │                 .background-slideshow {
+│   │                     z-index: -1;
+│   │                     width: 100vw;
+│   │                     height: 100vh;
+│   │                     position: fixed;
+│   │                     overflow: hidden;
+│   │                     inset: 0;
+│   │                 }
+│   │                 
+│   │                 #layer-current, #layer-next {
+│   │                     opacity: 0;
+│   │                     position: absolute;
+│   │                     object-fit: cover;
+│   │                     transition: opacity 5s ease-in-out;
+│   │                     width: 100%;
+│   │                     height: 100%;
+│   │                 }
+│   │                 
+│   │                 #layer-current { z-index: 1; }
+│   │                 #layer-next { z-index: 2; }
+│   │                 
+│   │                 .header {
+│   │                     overflow: visible;
+│   │                     z-index: 10;
+│   │                     font-family: var(--content-font-minecraft);
+│   │                     text-shadow: 2px 2px 5px white;
+│   │                     display: flex;
+│   │                     align-items: center;
+│   │                     justify-content: space-between;
+│   │                     background-color: rgb(var(--scheme-bg-color));
+│   │                     background-size: contain;
+│   │                     height: clamp(4vh, 5cqw, 6vh);
+│   │                     padding: 0 5%;
+│   │                     color: white;
+│   │                     font-size: clamp(12pt, 3cqw, 3cqh);
+│   │                     position: fixed;
+│   │                     width: 100%;
+│   │                     top: 0;
+│   │                     left: 0;
+│   │                 }
+│   │                 
+│   │                 .header a.title-group {
+│   │                     z-index: 3;
+│   │                     color: inherit;
+│   │                     display: flex;
+│   │                     flex-direction: column;
+│   │                     justify-content: center;
+│   │                     line-height: 1;
+│   │                     text-decoration: none;
+│   │                 }
+│   │                 
+│   │                 .header #navbar-drop {
+│   │                     display: none;
+│   │                     margin-bottom: 1em;
+│   │                 }
+│   │                 
+│   │                 #version {
+│   │                     z-index: 3;
+│   │                     font-size: 70%;
+│   │                     text-align: center;
+│   │                 }
+│   │                 
+│   │                 .nav-menu ul {
+│   │                     font-size: inherit;
+│   │                     list-style-type: none;
+│   │                     display: flex;
+│   │                     margin: 0;
+│   │                     align-items: center;
+│   │                 }
+│   │                 
+│   │                 .nav-menu ul li {
+│   │                     padding: 3px 0 3px 0;
+│   │                     margin-right: 10px;
+│   │                 }
+│   │                 
+│   │                 .nav-menu ul li a {
+│   │                     text-decoration: none;
+│   │                     color: inherit;
+│   │                     padding: 5px 10px;
+│   │                 }
+│   │                 
+│   │                 .nav-menu ul li a:hover {
+│   │                     transition: background-color .5s;
+│   │                     background-color: rgb(134, 115, 190);
+│   │                     padding-top: 15px;
+│   │                     padding-bottom: 15px;
+│   │                 }
+│   │                 
+│   │                 .logo {
+│   │                     z-index: 2;
+│   │                 }
+│   │                 
+│   │                 .logo a {
+│   │                     position: relative;
+│   │                     margin-top: var(--logo-top-margin);
+│   │                     display: flex;
+│   │                     justify-content: center;
+│   │                     align-items: center;
+│   │                 }
+│   │                 
+│   │                 .logo img {
+│   │                     scale: 0.45;
+│   │                     position: absolute;
+│   │                     padding: 10px;
+│   │                 }
+│   │                 
+│   │                 .personalization-config {
+│   │                     position: fixed;
+│   │                     margin-top: -200px;
+│   │                     display: flex;
+│   │                     right: clamp(10px, 32px, 64px);
+│   │                     top: 64px;
+│   │                     z-index: 3;
+│   │                 }
+│   │                 
+│   │                 .btn-cog {
+│   │                     cursor: pointer;
+│   │                     border-radius: 100%;
+│   │                     background-color: transparent;
+│   │                     border: none;
+│   │                     position: relative;
+│   │                     margin-top: 30px;
+│   │                     width: 50px;
+│   │                     height: 50px;
+│   │                     display: flex;
+│   │                     transform-origin: center;
+│   │                     padding: 0;
+│   │                 }
+│   │                 
+│   │                 .btn-cog svg {
+│   │                     scale: 1;
+│   │                     transition: transform .35s ease-in-out;
+│   │                     width: 100%;
+│   │                     height: 100%;
+│   │                 }
+│   │                 
+│   │                 .btn-cog svg:hover {
+│   │                     transform: rotate(90deg);
+│   │                 }
+│   │                 
+│   │                 .cog-dropdown {
+│   │                     position: absolute;
+│   │                     top: 100px;
+│   │                     right: 0;
+│   │                     background-color: rgba(16, 16, 16, 0.9);
+│   │                     color: white;
+│   │                     padding: 12px;
+│   │                     border-radius: 8px 0px 8px 8px;
+│   │                     width: 212px;
+│   │                     z-index: 4;
+│   │                     display: flex;
+│   │                     flex-direction: column;
+│   │                     opacity: 0;
+│   │                     visibility: hidden;
+│   │                     transform: translateY(-15px);
+│   │                     transition: opacity 0.3s ease-out, transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), visibility 0.3s;
+│   │                     box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5);
+│   │                     border: 1px solid rgba(255, 255, 255, 0.1);
+│   │                 }
+│   │                 
+│   │                 .cog-dropdown.active {
+│   │                     opacity: 1;
+│   │                     visibility: visible;
+│   │                     transform: translateY(0);
+│   │                 }
+│   │                 
+│   │                 .menu-header {
+│   │                     text-align: center;
+│   │                     font-family: 'VT323', monospace;
+│   │                     font-size: 1rem;
+│   │                     margin: 5px 0 12px 0;
+│   │                     padding-bottom: 8px;
+│   │                     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+│   │                     color: #fcc21b;
+│   │                     line-height: 1;
+│   │                     text-transform: uppercase;
+│   │                     letter-spacing: 1px;
+│   │                     pointer-events: none;
+│   │                 }
+│   │                 
+│   │                 .personalize input[type="radio"] {
+│   │                     position: absolute;
+│   │                     opacity: 0;
+│   │                     width: 0;
+│   │                     height: 0;
+│   │                 }
+│   │                 
+│   │                 .radio-custom {
+│   │                     display: inline-block;
+│   │                     vertical-align: middle;
+│   │                     width: 20px;
+│   │                     height: 20px;
+│   │                     border: 2px solid #fff;
+│   │                     background-color: transparent;
+│   │                     cursor: pointer;
+│   │                     margin-right: 10px;
+│   │                     box-sizing: border-box;
+│   │                     transition: border-color 0.2s;
+│   │                 }
+│   │                 
+│   │                 input[type="radio"]:checked + .radio-custom {
+│   │                     background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="-3 -1.5 64 64"><defs><clipPath id="clip-path"><rect width="58" height="61"/></clipPath></defs><g clip-path="url(%23clip-path)"><image width="58" height="61" xlink:href="data:img/png;base64,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"/></g></svg>');
+│   │                     background-size: cover;
+│   │                     background-repeat: no-repeat;
+│   │                     background-position: center;
+│   │                     border-color: #fcc21b;
+│   │                     image-rendering: pixelated;
+│   │                 }
+│   │                 
+│   │                 .radio-custom:hover {
+│   │                     background-color: rgba(255, 255, 255, 0.1);
+│   │                 }
+│   │                 
+│   │                 #personalize-form label {
+│   │                     display: inline-flex;
+│   │                     align-items: center;
+│   │                     cursor: pointer;
+│   │                 }
+│   │                 
+│   │                 .content {
+│   │                     width: 100%;
+│   │                     max-width: 700px;
+│   │                     border-radius: 16px;
+│   │                     margin: 0 auto;
+│   │                 }
+│   │                 
+│   │                 .content a {
+│   │                     text-decoration: underline;
+│   │                     color: white;
+│   │                     font-family: var(--content-font-minecraft);
+│   │                     font-size: 20pt;
+│   │                 }
+│   │                 
+│   │                 .content-box {
+│   │                     margin: 40px auto; 
+│   │                     width: 95%;
+│   │                     max-width: 624px;
+│   │                     padding: var(--content-padding);
+│   │                     display: flex;
+│   │                     flex-direction: column;
+│   │                     align-items: center;
+│   │                     text-align: center;
+│   │                     color: white;    
+│   │                 }
+│   │                 
+│   │                 .content-box div {
+│   │                     border-radius: 25px;
+│   │                 }
+│   │                 
+│   │                 div.content {
+│   │                     margin-top: 100px;
+│   │                     background-color: #463672cc;
+│   │                 }
+│   │                 
+│   │                 .home div {
+│   │                     margin-top: 96px;
+│   │                     padding: calc(var(--content-padding)) - 1vh;
+│   │                 }
+│   │                 
+│   │                 div.welcome-message {
+│   │                     background-color: rgba(var(--scheme-bg-color),.8);
+│   │                 }
+│   │                 
+│   │                 .content-box div h1 {
+│   │                     padding: 0 1% 0 1%;
+│   │                     font-size: min(48pt, 8vh);
+│   │                     letter-spacing: 4px;
+│   │                     font-family: var(--content-font-minecraft);
+│   │                     margin: 6px;
+│   │                 }
+│   │                 
+│   │                 .welcome-message em {/* '18+' */
+│   │                     font-size: 105%;
+│   │                     font-weight: bold;
+│   │                     letter-spacing: 2px;
+│   │                 }
+│   │                 
+│   │                 .flex-table {
+│   │                     display: flex;
+│   │                     flex-flow: row wrap;
+│   │                     gap: 1.5rem;
+│   │                     justify-content: center;
+│   │                 }
+│   │                 
+│   │                 .flex-table div {
+│   │                     margin: 1rem 0;
+│   │                 }
+│   │                 
+│   │                 .flex-table .table-item {
+│   │                     display: flex;
+│   │                     width: 45%;
+│   │                     gap: 1rem;
+│   │                     margin-top: 0;
+│   │                     align-items: flex-start;
+│   │                     box-sizing: border-box;
+│   │                 }
+│   │                 
+│   │                 .item-content p a {
+│   │                     text-decoration: underline;
+│   │                     color: white;
+│   │                     font-family: var(--content-font-minecraft);
+│   │                     font-size: 150%;
+│   │                 }
+│   │                 
+│   │                 .elaboration {
+│   │                     text-indent: .5em;
+│   │                     text-align: left;
+│   │                     margin-left: 32px;
+│   │                 }
+│   │                 
+│   │                 #rules-conclusion {
+│   │                     font-size: 48pt;
+│   │                 }
+│   │                 
+│   │                 .toggleable {
+│   │                     display: none !important;
+│   │                     scroll-margin-top: 500px;
+│   │                 }
+│   │                 
+│   │                 .toggleable.active {
+│   │                     display: flex !important;
+│   │                     flex-direction: column;
+│   │                     align-items: center;
+│   │                     animation: sectionOpen 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+│   │                 }
+│   │                 
+│   │                 @keyframes sectionOpen {
+│   │                     from {
+│   │                         opacity: 0;
+│   │                         transform: translateY(-20px) scale(0.98);
+│   │                     }
+│   │                     to {
+│   │                         opacity: 1;
+│   │                         transform: translateY(0) scale(1);
+│   │                     }
+│   │                 }
+│   │                 
+│   │                 /* ------------------------------------------------ GALLERY ------------------------------------------------ */
+│   │                 .gallery-container {
+│   │                     display: none;
+│   │                     min-height: 400px;
+│   │                     background-color: #463672;
+│   │                     margin-top: 200px;
+│   │                 }
+│   │                 
+│   │                 .gallery-container.active {
+│   │                     display: flex;
+│   │                     flex-direction: column;
+│   │                     align-items: center;
+│   │                     animation: sectionOpen 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+│   │                 }
+│   │                 
+│   │                 .gallery {
+│   │                     display: flex;
+│   │                 }
+│   │                 
+│   │                 button.cycle-img {
+│   │                     background-color: transparent;
+│   │                     border: none;
+│   │                     z-index: 10;
+│   │                 }
+│   │                 
+│   │                 .cycle-img svg{
+│   │                     transition: transform 0.3s ease-in-out;
+│   │                     width: 24px;
+│   │                     height: 24px;
+│   │                 }
+│   │                 
+│   │                 #previous-image svg {
+│   │                     transform: rotate(90deg); /* Points Left */
+│   │                 }
+│   │                 
+│   │                 #next-image svg {
+│   │                     transform: rotate(-90deg); /* Points Right */
+│   │                 }
+│   │                 
+│   │                 .cycle-img:hover svg {
+│   │                     scale: 1.2;
+│   │                 }
+│   │                 
+│   │                 #active-gallery-image {
+│   │                     width: 100%;
+│   │                     max-width: 100%;
+│   │                     height: auto;
+│   │                     object-fit: contain;
+│   │                     box-shadow: 0 0 40px rgb(12, 12, 12);
+│   │                     margin-bottom: 20px;
+│   │                 }
+│   │                 
+│   │                 /* ------------------------------------------------ FOOTER ------------------------------------------------ */
+│   │                 .main-footer {
+│   │                     background-color: rgba(0, 0, 0, 0.5);
+│   │                     color: lightgray;
+│   │                     display: flex;
+│   │                     flex-direction: column;
+│   │                     align-items: center;
+│   │                     justify-content: center;
+│   │                     padding: 20px 0;
+│   │                     text-align: center;
+│   │                 }
+│   │                 
+│   │                 .main-footer a span {
+│   │                     cursor: pointer;
+│   │                     color: var(--scheme-accent-color);
+│   │                     transition: color 0.2s ease, text-decoration 0.2s ease;
+│   │                     padding: 2px 5px;
+│   │                     border-radius: 4px;
+│   │                 }
+│   │                 
+│   │                 .main-footer a span:hover{
+│   │                     background: rgba(255, 255, 255, 0.1);
+│   │                     text-decoration: underline;
+│   │                 }
+│   │                 
+│   │                 #staff-header {
+│   │                     display: flex;
+│   │                     align-items: center;
+│   │                     justify-content: center;
+│   │                     gap: 10px;
+│   │                     width: 100%;
+│   │                     margin-bottom: 10px;
+│   │                 }
+│   │                 
+│   │                 .main-footer h2 {
+│   │                     margin: 0;
+│   │                     font-size: 1.5rem;
+│   │                 }
+│   │                 
+│   │                 .staff-expand, 
+│   │                 .expand-roles {
+│   │                     background: none;
+│   │                     border: none;
+│   │                     padding: 0;
+│   │                     cursor: pointer;
+│   │                     line-height: 0;
+│   │                     display: flex;
+│   │                     align-items: center;
+│   │                     justify-content: center;
+│   │                 
+│   │                     padding: 12px;
+│   │                     min-width: 44px;
+│   │                     min-height: 44px;
+│   │                     border-radius: 50%;
+│   │                 }
+│   │                 
+│   │                 .staff-expand svg, 
+│   │                 .expand-roles svg {
+│   │                     transform: rotate(-90deg);
+│   │                     transition: transform 0.3s ease-in-out;
+│   │                     transform-origin: center;
+│   │                 }
+│   │                 
+│   │                 .staff-expand:hover svg, 
+│   │                 .expand-roles:hover svg {
+│   │                     transform: rotate(0deg);
+│   │                 }
+│   │                 
+│   │                 .staff-expand.active svg, 
+│   │                 .expand-roles.active svg {
+│   │                     transform: rotate(0deg) !important;
+│   │                 }
+│   │                 
+│   │                 .staff-list {
+│   │                     display: none;
+│   │                     width: 100%;
+│   │                     max-width: 800px;
+│   │                 }
+│   │                 
+│   │                 .main-footer:has(.staff-expand.active) .staff-list {
+│   │                     display: block;
+│   │                 }
+│   │                 
+│   │                 .member {
+│   │                     display: flex;
+│   │                     flex-wrap: wrap;
+│   │                     align-items: center;
+│   │                     justify-content: center;
+│   │                     gap: 10px;
+│   │                     padding: 8px 0;
+│   │                     width: 100%;
+│   │                 }
+│   │                 
+│   │                 .all-roles {
+│   │                     display: none;
+│   │                     width: 100%;
+│   │                     margin-top: 5px;
+│   │                     font-size: 0.9em;
+│   │                     color: #cccccc;
+│   │                     justify-content: center;
+│   │                     text-align: center;
+│   │                 }
+│   │                 
+│   │                 .expand-roles.active + .all-roles {
+│   │                     display: flex; 
+│   │                     animation: slideDownFade 0.3s ease-out;
+│   │                 }
+│   │                 
+│   │                 a.discord-name-link {
+│   │                     text-decoration: none;
+│   │                     font-weight: normal;
+│   │                     color: #fcc21b;
+│   │                 }
+│   │                 
+│   │                 a.discord-name-link:hover {
+│   │                     text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+│   │                 }
+│   │                 
+│   │                 .featured-role {
+│   │                     color: white;
+│   │                     text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+│   │                 }
+│   │                 
+│   │                 @keyframes slideDownFade {
+│   │                     from { opacity: 0; transform: translateY(-5px); }
+│   │                     to { opacity: 1; transform: translateY(0); }
+│   │                 }
+│   │                 
+│   │                 .ip-text {
+│   │                     cursor: pointer;
+│   │                     color: var(--scheme-accent-color);
+│   │                     transition: color 0.2s ease, text-decoration 0.2s ease;
+│   │                     padding: 2px 5px;
+│   │                     border-radius: 4px;
+│   │                 }
+│   │                 
+│   │                 .ip-text:hover {
+│   │                     background: rgba(255, 255, 255, 0.1);
+│   │                     text-decoration: underline;
+│   │                 }
+│   │                 
+│   │                 #footer-server-ip h3 {
+│   │                     position: relative;
+│   │                     display: inline-flex;
+│   │                     align-items: center;
+│   │                     color: #ffaa00;
+│   │                     margin-top: 0;
+│   │                     padding: 5px;
+│   │                     border-radius: 4px;
+│   │                     width: 100%;
+│   │                 }
+│   │                 
+│   │                 #footer-server-ip h3 span:hover{
+│   │                     text-decoration: underline;
+│   │                     background-color: rgba(255, 255, 255, 0.1);
+│   │                     cursor: pointer;
+│   │                 }
+│   │                 
+│   │                 #support a {
+│   │                     text-decoration: none;
+│   │                     color: var(--scheme-accent-color);
+│   │                 }
+│   │                 
+│   │                 #disclaimer {
+│   │                     font-size: 0.8rem;
+│   │                     opacity: 0.9;
+│   │                 }
+│   │                 
+│   │                 @media screen and (max-width: 720px) {    
+│   │                     .personalization-config {
+│   │                         top: 92px;
+│   │                     }
+│   │                 
+│   │                     .content {
+│   │                         width: 100%;
+│   │                     }
+│   │                 }
+│   │                 
+│   │                 @media screen and (max-height: 700px) {
+│   │                     .header {
+│   │                         height: clamp(42px, 8vh, 44px);
+│   │                     }
+│   │                 }
+│   │                 
+│   │                 @media screen and (max-width: 624px) {/* All this does visually is put the title group on top, then the navigation bar underneath. At this width, the navigation bar items are still aligned vertically  */
+│   │                     .personalization-config {
+│   │                         margin-top: -150px;
+│   │                     }
+│   │                 
+│   │                     .header {
+│   │                         width: 100%;
+│   │                         flex-direction: column;
+│   │                         justify-content: center;
+│   │                         height: auto;
+│   │                         padding: 15px 0;
+│   │                         margin-top: -2%;
+│   │                         font-size: 5vw;
+│   │                     }
+│   │                 
+│   │                     .header a.title-group {
+│   │                         align-items: center;
+│   │                         text-align: center;
+│   │                         width: 100%;
+│   │                     }
+│   │                 
+│   │                     .nav-menu ul {
+│   │                         justify-content: center;
+│   │                         width: 100%;
+│   │                         background-color: transparent;
+│   │                         padding: 0;
+│   │                         margin-top: 8px;
+│   │                     }
+│   │                 
+│   │                     .logo img {/* Shrink the logo to be visible on narrower screens */
+│   │                         scale: 0.3;
+│   │                     }
+│   │                 
+│   │                     .content-box div {
+│   │                         width: 100%;
+│   │                     }
+│   │                 }
+│   │                 
+│   │                 @media screen and (max-width: 480px) {/* Make the nav menu options aligned horizontally instead of vertically and increase font size */
+│   │                     .nav-menu ul {
+│   │                         display: none;
+│   │                     }
+│   │                 
+│   │                     .nav-menu ul.show {
+│   │                         display: flex;
+│   │                     }
+│   │                 
+│   │                     .header #navbar-drop {
+│   │                         display: inline-block;
+│   │                         width: 32px;
+│   │                         height: 16px;
+│   │                         background: transparent;
+│   │                         border: none;
+│   │                         padding: 0;
+│   │                         cursor: pointer;
+│   │                         vertical-align: bottom;
+│   │                         margin-top: .5em;
+│   │                         align-items: center;
+│   │                         width: 100%;
+│   │                         scale: 0.4;
+│   │                     }
+│   │                 
+│   │                     .header #navbar-drop svg {
+│   │                         width: 100%;
+│   │                         height: auto;
+│   │                         display: block;
+│   │                         transition: transform 0.3s ease-in-out;/* make the arrow spin when pressed */
+│   │                     }
+│   │                 
+│   │                     .header #navbar-drop.active svg {
+│   │                         transform: rotate(180deg);
+│   │                     }
+│   │                 
+│   │                     .personalization-config {
+│   │                         margin-top: -100px;
+│   │                         top: 0;
+│   │                     }
+│   │                     
+│   │                     .nav-menu ul {
+│   │                         font-size: 12pt;
+│   │                         flex-direction: column;
+│   │                     }
+│   │                 
+│   │                     nav.nav-menu ul li a:hover {
+│   │                         padding: 0;
+│   │                     }
+│   │                 
+│   │                     .content-box {
+│   │                         width: 90%; 
+│   │                         padding: 10px;
+│   │                     }
+│   │                 
+│   │                     .content-box div h1, .content-box div p {
+│   │                         min-width: 0;
+│   │                         width: 100%;
+│   │                         word-wrap: break-word;/* Prevent long strings from breaking the wrap */
+│   │                     }
+│   │                 
+│   │                     .elaboration {
+│   │                         text-align: center;
+│   │                         margin-left: 0;
+│   │                     }
+│   │                 }
+│   │                 
+│   │                 @media screen and (max-width: 388px){
+│   │                     .logo img {
+│   │                         scale: 0.18;
+│   │                         padding: 5px;
+│   │                     }
+│   │                 
+│   │                     .flex-table div {
+│   │                         margin-top: 0;
+│   │                     }
+│   │                 }
+│   │                 
+│   │                 @media screen and (max-width: 360px) {
+│   │                     /* Targets JioPhone, Nokia, and Small Samsungs */
+│   │                     .header a.title-group {
+│   │                         font-size: 1rem;
+│   │                     }
+│   │                 
+│   │                     .logo img {
+│   │                         scale: 0.2; /* Better visibility on tiny screens */
+│   │                     }
+│   │                 
+│   │                     .content {
+│   │                         border-radius: 8px; /* Softer look on small screens */
+│   │                     }
+│   │                 
+│   │                     .content-box div h1 {
+│   │                         font-size: 1.5rem;
+│   │                     }
+│   │                 
+│   │                     /* Fix for the Gallery buttons touching the edges */
+│   │                     .gallery {
+│   │                         width: 100%;
+│   │                         justify-content: space-between;
+│   │                         align-items: center;
+│   │                     }
+│   │                     
+│   │                     .cycle-img {
+│   │                         padding: 5px;
+│   │                     }
+│   │                 }
+│   │                 
+│   │                 @media screen and (max-height: 1048px) {
+│   │                     .personalization-config {
+│   │                         top: 250px;
+│   │                     }
+│   │                 }
+│   ├── data/
+│   │   └── config.json
+│   │           |
+│   │              ** CONTENT **
+│   │                 {
+│   │                     "server":{
+│   │                         "title": "Sundown SMP",
+│   │                         "version": "1.21.11",
+│   │                         "ip": "mc.sundown.social",
+│   │                         "status_api": "https://api.mcstatus.io/v2/status/java/sundown.social",
+│   │                         "invite_link": "https://discord.gg/wExHHDzt3z"
+│   │                     },
+│   │                 
+│   │                     "web": {
+│   │                         "title": "Sundown SMP",
+│   │                         "navigation": [
+│   │                             {"name": "Home", "url": "#home", "target": "_self"},
+│   │                             {"name": "Join", "url": "#join", "target": "_self"},
+│   │                             {"name": "Map", "url": "https://map.sundown.social/#world:9021:311:-6087:81:0:0:0:0:perspective", "target": "_blank"},
+│   │                             {"name": "Gallery", "url": "#gallery", "target": "_self"},
+│   │                             {"name": "Rules", "url": "#rules", "target": "_self"}
+│   │                         ],
+│   │                         "logo": [
+│   │                             {"text": "Beach", "for": "sundown-beach","id": "sundown-beach", "value": "/assets/ui/sundown_beach.avif"},
+│   │                             {"text": "Mountains 1 (Default)", "for": "mountains-1","id": "mountains-1", "value": "/assets/ui/sundown_mountains1.avif"},
+│   │                             {"text": "Mountains 2", "for": "mountains-2","id": "mountains-2", "value": "/assets/ui/sundown_mountains2.avif"},
+│   │                             {"text": "Mountains 3", "for": "mountains-3","id": "mountains-3", "value": "/assets/ui/sundown_mountains3.avif"}
+│   │                         ],
+│   │                         "radio-name": "sundown-logo",
+│   │                         "gallery_path": {"name": "/assets/img/uploads/avif"},
+│   │                         "gallery_format": {"name": "avif"},
+│   │                         "gallery": [
+│   │                             {"name": "gal-s1-choinc-build-air-1-20260322", "altText": "An aerial view of Choinc's original bridge build"},
+│   │                             {"name": "gal-s1-choinc-build-air-2-20260322", "altText": "An aerial view of Choinc's original bridge build"},
+│   │                             {"name": "gal-s1-choinc-build-walk-20260322", "altText": "A walking view of Choinc's original bridge build"},
+│   │                             {"name": "gal-s1-choinc-piglin-farm-20260322", "altText": "Choinc's absurdly efficient piglin bartering farm"},
+│   │                             {"name": "gal-s1-duif-bridge-20260322", "altText": "Duifman's bridge and hangar"},
+│   │                             {"name": "gal-s1-duif-enchanter-20260322", "altText": "Duifman's enchanter boat and hangar"},
+│   │                             {"name": "gal-s1-duif-mechanism-air-20260322", "altText": "An aerial view of Duifman's industrial-organic mechanism"},
+│   │                             {"name": "gal-s1-duif-mechanism-ground-20260322", "altText": "Duifman's industrial-organic mechanism"},
+│   │                             {"name": "gal-s1-evo-gothic-house-2-20260427", "altText": "Evo's beautiful gothic home"},
+│   │                             {"name": "gal-s1-evo-gothic-house-20260427", "altText": "An aerial view of Evo's beautiful gothic home"},
+│   │                             {"name": "gal-s1-nerdy-ghast-barn-20260322", "altText": "Nerdy's happy ghast garage and entrance to barn"},
+│   │                             {"name": "gal-s1-miku-barn-20260322", "altText": "Miku's cozy barn"},
+│   │                             {"name": "gal-s1-miku-home-20260322", "altText": "Miku's home"},
+│   │                             {"name": "gal-s1-miku-honey-farm-20260322", "altText": "Miku's adorable honey farm"},
+│   │                             {"name": "gal-s1-miku-portrait-20260322", "altText": "Miku staring off into the sunrise"},
+│   │                             {"name": "gal-s1-miku-trading-hall-20260322", "altText": "Miku's trading hall building"},
+│   │                             {"name": "gal-s1-nerdy-ghast-barn-20260322", "altText": "Nerdy's happy ghast garage and entrance to barn"},
+│   │                             {"name": "gal-s1-prs0n-forest-mansion-20260510", "altText": "Prs0n's beautiful large taiga mansion and farm"}
+│   │                         ],
+│   │                 
+│   │                         "staff": [
+│   │                         {"name": "chonkleblorp", "url": "https://discord.com/users/1200315477013049414", "rankRoles": ["SMP Owner and admin, website developer, administrator, moderator", "Shooting Stars", "Starlings"]},
+│   │                         {"name": "Tthe_Nerdy", "url": "https://discord.com/users/583838117870567426", "rankRoles": ["Discord server owner, moderator, administrator", "Supernova", "Shooting Stars", "Starlings"]},
+│   │                         {"name": "pans_miku", "url": "https://discord.com/users/760151904025575455", "rankRoles": ["Moderator, administrator", "Shooting Stars", "Starlings"]}
+│   │                         ]
+│   │                     }
+│   │                 }
+│   └── ts/
+│       ├── bundle-entry.ts
+│       │       |
+│       │          ** CONTENT **
+│       │             // src/ts/bundle-entry.ts
+│       │             import { initSite } from './main.js';
+│       │             import { initDiscordPage } from './discord.js';
+│       │             
+│       │             document.addEventListener('DOMContentLoaded', () => {
+│       │                 // Check if we are on the Discord redirect page
+│       │                 if (document.getElementById('countdown')) {
+│       │                     initDiscordPage();
+│       │                 } 
+│       │                 
+│       │                 // Check if we are on the main landing page
+│       │                 if (document.getElementById('server-title')) {
+│       │                     initSite();
+│       │                 }
+│       │             });
+│       ├── config.ts
+│       │       |
+│       │          ** CONTENT **
+│       │             interface Gallery {
+│       │                 length: number
+│       │                 getUrl(index: number, baseUrl: string, ext: string): string
+│       │                 getRandomIndex(currentIndex: number): number
+│       │             }
+│       │             
+│       │             interface Slideshow {
+│       │                 stop(): void
+│       │                 start(interval?: number): void
+│       │             }
+│       │             
+│       │             export class Config {
+│       │                 public logo: string
+│       │                 public slideshowInterval: number
+│       │                 private slideshow: Slideshow
+│       │             
+│       │                 constructor(path: string, slideshowInterval: number, slideshow: Slideshow) {
+│       │                     this.slideshow = slideshow
+│       │                     this.slideshowInterval = slideshowInterval
+│       │                     
+│       │                     this.logo = this.setLogo(path)
+│       │             
+│       │                     // stop any current execution and re-initialize with the new interval
+│       │                     this.slideshow.stop()
+│       │                     this.slideshow.start(this.slideshowInterval)
+│       │                 }
+│       │             
+│       │                 update(settings: { path?: string, interval?: number }) {
+│       │                     if (settings.path) {
+│       │                         this.setLogo(settings.path)
+│       │                     }
+│       │                     if (settings.interval !== undefined) {
+│       │                         this.setSlideshowInterval(settings.interval)
+│       │                     }
+│       │                 }
+│       │             
+│       │                 setLogo(path: string): string {
+│       │                     this.logo = path
+│       │                     const logoElem = document.getElementById('logo-image') as HTMLImageElement
+│       │                     if (logoElem) {
+│       │                         logoElem.src = this.logo
+│       │                     }
+│       │                     return this.logo
+│       │                 }
+│       │             
+│       │                 setSlideshowInterval(milliseconds: number, slideshow?: Slideshow) {
+│       │                     if (slideshow) {
+│       │                         this.slideshow = slideshow
+│       │                     }
+│       │             
+│       │                     this.slideshowInterval = milliseconds
+│       │             
+│       │                     // reset the cycle with the new timing
+│       │                     this.slideshow.stop()
+│       │                     this.slideshow.start(this.slideshowInterval)
+│       │                 }
+│       │             }
+│       ├── content.ts
+│       │       |
+│       │          ** CONTENT **
+│       │             interface NavOption {
+│       │                 name: string
+│       │                 url: string
+│       │                 target: string
+│       │             }
+│       │             
+│       │             class Header {
+│       │                 private title: string
+│       │                 private version: string
+│       │                 private options: []
+│       │             
+│       │                 constructor(title: string, version: string, options: []) {
+│       │                     this.title = title
+│       │                     this.version = version
+│       │                     this.options = options
+│       │                 }
+│       │             
+│       │                 populate(): void {
+│       │                     const titleElem = document.getElementById('server-title') as HTMLDivElement
+│       │                     const versionElem = document.getElementById('version') as HTMLDivElement
+│       │                     const navList = document.getElementById('nav-list') as HTMLUListElement
+│       │             
+│       │                     if (titleElem) titleElem.innerText = this.title
+│       │                     if (versionElem) versionElem.innerText = this.version
+│       │             
+│       │                     // loop through the options passed in the constructor and put them in the nav bar
+│       │                     this.options.forEach((option: NavOption) => {
+│       │                         const li = document.createElement('li') as HTMLLIElement
+│       │                         const link = document.createElement('a') as HTMLAnchorElement
+│       │             
+│       │                         // access the name, url, and target properties directly through the interface
+│       │                         li.id = option.name.toLowerCase()
+│       │                         link.innerText = option.name
+│       │                         link.href = option.url
+│       │                         link.target = option.target
+│       │             
+│       │                         li.appendChild(link)
+│       │                         navList.appendChild(li)
+│       │                     })
+│       │             
+│       │                     const readyEvent = new CustomEvent('headerReady', {
+│       │                         bubbles: true,
+│       │                         detail: {
+│       │                             type: 'header',
+│       │                             element: navList,
+│       │                             instance: this
+│       │                         }
+│       │                     })
+│       │                     navList?.dispatchEvent(readyEvent)
+│       │                 }
+│       │             }
+│       │             
+│       │             interface StaffMember {
+│       │                 name: string
+│       │                 url: string
+│       │                 rankRoles: string[]
+│       │             }
+│       │             
+│       │             class Footer {
+│       │                 private address: string
+│       │                 private staff: []
+│       │             
+│       │                 constructor(address: string, staff: []) {
+│       │                     this.address = address
+│       │                     this.staff = staff
+│       │                 }
+│       │             
+│       │                 populate(): void {
+│       │                     const expandBtnSvgCode = `<svg width="16" height="8" viewBox="0 0 16 8"><g><path style="fill:rgb(92%,92%,92%);" d="M0.9 -0.1c0.9 0 1.3 0.4 1.9 1l0.3 0.3c0.2 0.2 0.3 0.3 0.5 0.4l0.2 0.2q0.6 0.5 1.2 1a76 76 0 0 1 1.2 1q0.1 0.1 0.3 0.2c0.2 0.1 0.3 0.3 0.5 0.4l0.2 0.2 0.2 0.2c0.2 0.2 0.4 0.3 0.7 0.4l0.3 -0.3c0.8 -0.7 1.5 -1.4 2.3 -2.1 0.4 -0.4 0.9 -0.8 1.3 -1.1 0.5 -0.5 1.1 -1 1.7 -1.4 0.3 -0.2 0.3 -0.2 0.5 -0.5 0.3 0 0.3 0 0.8 0l0.4 0c0.3 0.2 0.3 0.2 0.6 0.2a2.8 2.8 0 0 1 0 1.4c-0.4 0.5 -0.8 0.8 -1.3 1.1q-0.3 0.3 -0.7 0.6 -0.2 0.1 -0.3 0.3a27 27 0 0 0 -1.6 1.3c-0.6 0.5 -1.1 1 -1.7 1.5a29.5 29.5 0 0 0 -1 0.9q-0.2 0.1 -0.3 0.3a11 11 0 0 0 -0.5 0.5c-0.3 0.3 -0.7 0.5 -1.1 0.5 -0.9 0 -1.4 -0.8 -2 -1.4q-0.3 -0.3 -0.7 -0.6a27.5 27.5 0 0 1 -1.4 -1.1 32.5 32.5 0 0 0 -1.8 -1.5 33 33 0 0 1 -1.3 -1.2c-0.3 -0.2 -0.3 -0.2 -0.6 -0.4c-0.3 -0.2 -0.3 -0.2 -0.4 -0.5l0 -0.4c0 -0.1 0 -0.2 0 -0.4c0 -0.1 0.4 -0.1 0.9 -0.1"/></g></svg>`
+│       │                     const footerElem = document.querySelector('.main-footer')
+│       │                     if (!footerElem) return
+│       │                     const footerIpElem = document.getElementById('footer-server-ip') as HTMLDivElement
+│       │                     const h3Wrapper = document.createElement('h3')
+│       │                     footerIpElem.appendChild(h3Wrapper)
+│       │             
+│       │                     const addressElem = document.createElement('span') as HTMLSpanElement
+│       │                     addressElem.innerText = this.address
+│       │                     addressElem.className = 'ip-text'
+│       │                     h3Wrapper.appendChild(addressElem)
+│       │                     addressElem.title = 'Click to copy IP'
+│       │             
+│       │                     addressElem.addEventListener('click', () => {
+│       │                         navigator.clipboard.writeText(this.address).then(() => {
+│       │                             addressElem.innerText = "Copied!"
+│       │                             setTimeout(() => {
+│       │                                 addressElem.innerText = this.address
+│       │                             }, 2000)
+│       │                         })
+│       │                     })
+│       │                     
+│       │                     // initialize staff
+│       │                     const staffCont = document.createElement('div') as HTMLDivElement
+│       │                     staffCont.className = 'staff-list'
+│       │             
+│       │                     const staffHeader = document.getElementById('staff-header') as HTMLDivElement
+│       │                     const footerExpandBtn = document.createElement('button') as HTMLButtonElement
+│       │                     footerExpandBtn.className = 'staff-expand'
+│       │                     footerExpandBtn.title = "Toggle Staff List"
+│       │                     footerExpandBtn.innerHTML = footerExpandBtn.innerHTML = expandBtnSvgCode
+│       │             
+│       │                     staffHeader.appendChild(footerExpandBtn)
+│       │                     footerExpandBtn.addEventListener('click', () => {
+│       │                         footerExpandBtn.classList.toggle('active')
+│       │                         footerExpandBtn.scrollIntoView({ behavior: 'smooth', block: 'start' })
+│       │                     })
+│       │                     footerElem.appendChild(staffCont)
+│       │             
+│       │                     const staffElem = document.querySelector('.staff-list') as HTMLDivElement
+│       │                     if (!staffElem) return
+│       │                     staffElem.innerHTML = ''
+│       │             
+│       │                     this.staff.forEach((member: StaffMember) => {
+│       │                         const memberElem = document.createElement('div') as HTMLDivElement
+│       │                         memberElem.className = 'member'
+│       │             
+│       │                         // name and featured role (first role in the role list, the member's highest 'rank')
+│       │                         const nameElem = document.createElement('h3') as HTMLHeadingElement
+│       │                         nameElem.className = 'name'
+│       │             
+│       │                         // link
+│       │                         const nameLinkElem = document.createElement('a') as HTMLAnchorElement
+│       │                         nameLinkElem.href = member.url
+│       │                         nameLinkElem.className = 'discord-name-link'
+│       │                         nameLinkElem.textContent = member.name + ": "
+│       │             
+│       │                         // roles
+│       │                         const firstRole: string = (member.rankRoles[0] || "").toLowerCase().replace(/^\w/, c => c.toUpperCase())
+│       │                         const roleSpanElem = document.createElement('span') as HTMLSpanElement
+│       │                         roleSpanElem.className = 'featured-role'
+│       │                         roleSpanElem.textContent = firstRole
+│       │             
+│       │                         // append the name link and role span to the name heading
+│       │                         nameElem.appendChild(nameLinkElem)
+│       │                         nameElem.appendChild(roleSpanElem)
+│       │             
+│       │                         // expand button for each individual staff member
+│       │                         const staffExpandBtn = document.createElement('button') as HTMLButtonElement
+│       │                         staffExpandBtn.className = 'expand-roles'
+│       │                         staffExpandBtn.title = 'View all roles'
+│       │                         staffExpandBtn.innerHTML = expandBtnSvgCode
+│       │             
+│       │                         // full role list (excluding the first/featured role already displayed)
+│       │                         const rolesDisplay = member.rankRoles
+│       │                             .slice(1)
+│       │                             .map(r => r.charAt(0).toUpperCase() + r.slice(1).toLowerCase())
+│       │                             .join(", ")
+│       │                         
+│       │                         const rolesElem = document.createElement('div') as HTMLDivElement
+│       │                         rolesElem.className = 'all-roles'
+│       │                         rolesElem.textContent = rolesDisplay
+│       │             
+│       │                         // hide the expand button if there are no additional roles to show
+│       │                         if (member.rankRoles.length <= 1) staffExpandBtn.style.display = 'none'
+│       │             
+│       │                         staffExpandBtn.addEventListener('click', () => {
+│       │                             staffExpandBtn.classList.toggle('active')
+│       │                             staffExpandBtn.scrollIntoView({ behavior: 'smooth', block: 'start' })
+│       │                         })
+│       │             
+│       │                         memberElem.appendChild(nameElem)
+│       │                         memberElem.appendChild(staffExpandBtn)
+│       │                         memberElem.appendChild(rolesElem)
+│       │                         staffElem.appendChild(memberElem)
+│       │                     })
+│       │                 }
+│       │             }
+│       │             
+│       │             export class Content {
+│       │                 public header: Header
+│       │                 public footer: Footer
+│       │                 constructor(title: string, version: string, options: [], address: string, staff: []) {
+│       │                     this.header = new Header(title, "Version " + version, options)
+│       │                     this.footer = new Footer(address, staff)
+│       │                 }
+│       │             
+│       │                 populate(): void {
+│       │                     this.header.populate()
+│       │                     this.footer.populate()
+│       │                 }
+│       │             }
+│       ├── discord.ts
+│       │       |
+│       │          ** CONTENT **
+│       │             export function initDiscordPage() {
+│       │                 const inviteLink = "https://discord.gg/wExHHDzt3z";
+│       │                 const countdownElem = document.getElementById('countdown');
+│       │                 const tabTitle = document.getElementById('tabbar-title');
+│       │             
+│       │                 let seconds = 5;
+│       │             
+│       │                 const interval = setInterval(() => {
+│       │                     seconds--;
+│       │                     
+│       │                     if (countdownElem) {
+│       │                         countdownElem.innerText = seconds.toString();
+│       │                     }
+│       │                     
+│       │                     if (tabTitle) {
+│       │                         tabTitle.innerText = `Joining in ${seconds}s...`;
+│       │                     }
+│       │             
+│       │                     if (seconds <= 0) {
+│       │                         clearInterval(interval);
+│       │                         window.location.href = inviteLink;
+│       │                     }
+│       │                 }, 1000);
+│       │             }
+│       ├── gallery.ts
+│       │       |
+│       │          ** CONTENT **
+│       │             interface GalleryImage {
+│       │                 name: string
+│       │                 altText: string
+│       │             }
+│       │             
+│       │             export class Gallery extends Array<GalleryImage> {
+│       │                 constructor(images: GalleryImage[] = []) {
+│       │                     super(...images)
+│       │                 }
+│       │             
+│       │                 sortAlphabetically(): void {// just in case, it might save me from having to manually alphabetize the config
+│       │                     this.sort((a, b) => a.name.localeCompare(b.name))
+│       │                 }
+│       │             
+│       │                 // helper function to get the URL of any image
+│       │                 getUrl(index: number, baseUrl: string, ext: string): string {
+│       │                     const item = this[index]
+│       │                     if (!item) return ""
+│       │                     return `${baseUrl}/${item.name}.${ext}`
+│       │                 }
+│       │             
+│       │                 getAltText(index: number) {
+│       │                     const item = this[index]
+│       │                     if (!item) return ""
+│       │                     return item.altText
+│       │                 }
+│       │             
+│       │                 // helper function to get a random index, which will be used by the slideshow
+│       │                 getRandomIndex(currentIndex: number): number {
+│       │                     if (this.length <= 1) return 0
+│       │                     let nextIndex: number
+│       │                     do {
+│       │                         nextIndex = Math.floor(Math.random() * this.length)
+│       │                     } while (nextIndex == currentIndex)
+│       │                     return nextIndex
+│       │                 }
+│       │             }
+│       ├── lib.ts
+│       │       |
+│       │          ** CONTENT **
+│       │             export async function getConfig(configFile: string) {
+│       │                 try {
+│       │                     const response = await fetch(configFile)
+│       │                     if (!response.ok) { throw new Error(`HTTP Error. Status: ${response.status}`) }
+│       │                     const config = await response.json()
+│       │                     return config
+│       │                 } catch (error) {
+│       │                     console.error("Error loading site configuration:", error)
+│       │                     throw error
+│       │                 }
+│       │             }
+│       │             
+│       │             export function setupNavigationRouting(event: Event) {
+│       │                 const contentReadyEvent = event as CustomEvent
+│       │                 const { type, element, instance } = contentReadyEvent.detail
+│       │             
+│       │                 document.addEventListener('click', (e) => {
+│       │                     const target = (e.target as HTMLElement).closest('a')
+│       │                     if (target && target.hash) {
+│       │                         if(target.target === '_blank') return // shouldn't prevent the default if we're doing a redirect
+│       │                         e.preventDefault()
+│       │                         navEventHandler(target)
+│       │                     }
+│       │                 })
+│       │             
+│       │                 const routingSetupEvent = new CustomEvent('navRoutingSetup', {
+│       │                     detail: {
+│       │                         type: 'navigation',
+│       │                         timestamp: Date.now(),
+│       │                         source: element
+│       │                     },
+│       │                     bubbles: true
+│       │                 })
+│       │                 document.dispatchEvent(routingSetupEvent)
+│       │             }
+│       │             
+│       │             export function navEventHandler(target: HTMLAnchorElement) {
+│       │                 const intent = (target.parentElement as HTMLLIElement).id
+│       │                 const toggleables = document.querySelectorAll('.toggleable, .home')
+│       │                 toggleables.forEach(toggleable => toggleable.classList.remove('active'))
+│       │                 window.scrollTo({ top: 0, behavior: 'smooth' })
+│       │                 if (intent == 'home') {
+│       │                     const homeSections = document.querySelectorAll('.home')
+│       │                     homeSections.forEach(section => section.classList.add('active'))
+│       │                 } else if (intent == 'join') {
+│       │                     document.querySelector('.join')?.classList.add('active')
+│       │                 } else if (intent == 'gallery') {
+│       │                     document.querySelector('.gallery-container')?.classList.add('active')
+│       │                 } else if (intent == 'rules') {
+│       │                     document.querySelector('.rules')?.classList.add('active')
+│       │                 }
+│       │             }
+│       │             
+│       │             interface Gallery {
+│       │                 length: number
+│       │                 getUrl(index: number, baseUrl: string, ext: string): string
+│       │                 getAltText(currentIndex: number): string
+│       │                 getRandomIndex(currentIndex: number): number
+│       │             }
+│       │             
+│       │             export function galleryDivDisplay(gallery: Gallery, imgCdnBase: string, format: string ='avif') {
+│       │                 const galleryElem = document.querySelector('.gallery')
+│       │                 const imageViewElem = document.getElementById('image-view') as HTMLImageElement
+│       │                 // now, we show the display with the very first image
+│       │                 const activeImgElem = document.createElement('img') as HTMLImageElement
+│       │                 activeImgElem.id = 'active-gallery-image'
+│       │             
+│       │                 let currentIndex = 0
+│       │                 activeImgElem.src = gallery.getUrl(currentIndex, imgCdnBase, format)
+│       │                 imageViewElem.appendChild(activeImgElem)
+│       │             
+│       │                 const imageDescriptionElement = document.getElementById('image-description') as HTMLHeadingElement
+│       │                 imageDescriptionElement.textContent = gallery.getAltText(currentIndex)
+│       │             
+│       │                 // now, we need an event listener for the image cycling buttons
+│       │                 galleryElem?.addEventListener('click', (e) => {
+│       │                     const btn = (e.target as HTMLElement).closest('.cycle-img')
+│       │                     if (!btn) return
+│       │             
+│       │                     if (btn.id === 'next-image') {
+│       │                         currentIndex = (currentIndex + 1) % gallery.length
+│       │                     } else if (btn.id === 'previous-image') {
+│       │                         currentIndex = (currentIndex - 1 + gallery.length) % gallery.length
+│       │                     }
+│       │                     activeImgElem.src = gallery.getUrl(currentIndex, imgCdnBase, format)
+│       │                     imageDescriptionElement.textContent = gallery.getAltText(currentIndex)
+│       │                 })
+│       │             }
+│       │             
+│       │             interface Config {
+│       │                 logo: string
+│       │                 slideshowInterval: number
+│       │                 update(settings: { path?: string, interval?: number }): void
+│       │             }
+│       │             
+│       │             interface Logo {
+│       │                 text: string
+│       │                 for: string
+│       │                 id: string
+│       │                 value: string
+│       │             }
+│       │             
+│       │             export function configHandler(config: Config, logos: Array<Logo>) {
+│       │                 populateLogoOptions(logos)
+│       │                 const personalizationContainerElem = document.querySelector('.personalization-config') as HTMLDivElement
+│       │                 const dropdownElem = document.querySelector('.cog-dropdown') as HTMLDivElement
+│       │                 closePopupOnOutsideClick(dropdownElem, personalizationContainerElem)
+│       │                 personalizationContainerElem.addEventListener('click', (e) => {
+│       │                     const target = e.target as Element
+│       │                     const btn = target.closest('button')
+│       │                     const intervalInput = (target.closest('input[name="interval-rad"]') || 
+│       │                         target.closest('label')?.querySelector('input[name="interval-rad"]')) as HTMLInputElement
+│       │                     const logoInput = (target.closest('input[name="sundown-logo"]') || 
+│       │                             target.closest('label')?.querySelector('input[name="sundown-logo"]')) as HTMLInputElement
+│       │             
+│       │                     if (btn) {
+│       │                         dropdownElem.classList.toggle('active')
+│       │                     } else if (intervalInput){
+│       │                         const seconds = parseInt(intervalInput.value)
+│       │                         const milliseconds = seconds * 1000
+│       │                         config.update({ interval: milliseconds })
+│       │                         console.log(`Slideshow interval set to: ${milliseconds}ms`)
+│       │                     } else if (logoInput) {
+│       │                         config.update({ path: logoInput.value })
+│       │                     }
+│       │                 })
+│       │             }
+│       │             
+│       │             function closePopupOnOutsideClick(dropdownElem: HTMLDivElement, personalizationContainerElem: HTMLDivElement) {
+│       │                 document.addEventListener('click', (e) => {
+│       │                     const target = e.target as Element
+│       │                     if (dropdownElem.classList.contains('active') && !personalizationContainerElem.contains(target))
+│       │                         dropdownElem.classList.remove('active')
+│       │                 })
+│       │             }
+│       │             
+│       │             function populateLogoOptions(logos: Array<Logo>) {
+│       │                 const logoSelectionElement = document.getElementById('logo-selection') as HTMLDivElement
+│       │                 
+│       │                 // 1. Clear the div but immediately re-add the header
+│       │                 logoSelectionElement.innerHTML = '<h3 class="menu-section-header">Logo</h3>'
+│       │             
+│       │                 logos.forEach((logo) => {
+│       │                     const labelElem = document.createElement('label') as HTMLLabelElement
+│       │                     labelElem.htmlFor = logo.for
+│       │             
+│       │                     const inputElem = document.createElement('input') as HTMLInputElement
+│       │                     inputElem.id = logo.id
+│       │                     inputElem.name = 'sundown-logo'
+│       │                     inputElem.type = 'radio'
+│       │                     inputElem.value = logo.value
+│       │             
+│       │                     if (logo.id === 'mountains-1') { 
+│       │                         inputElem.checked = true 
+│       │                     }
+│       │             
+│       │                     const spanElem = document.createElement('span') as HTMLSpanElement
+│       │                     spanElem.classList.add('radio-custom')
+│       │                     spanElem.classList.add(logo.for)
+│       │             
+│       │                     // 2. DOM ORDER: input first, then span (critical for the CSS + selector)
+│       │                     labelElem.appendChild(inputElem)
+│       │                     labelElem.appendChild(spanElem)
+│       │                     
+│       │                     // Add the text label
+│       │                     labelElem.appendChild(document.createTextNode(` ${logo.text}`))
+│       │                     
+│       │                     logoSelectionElement.appendChild(labelElem)
+│       │                     logoSelectionElement.appendChild(document.createElement('br'))
+│       │                 })
+│       │             }
+│       │             
+│       │             interface Slideshow {
+│       │                 stop(): void
+│       │                 start(interval: number): void
+│       │             }
+│       │             
+│       │             export function syncSlideshowWithGalleryVisibility(selector: string, slideshow: Slideshow, config: Config): void {
+│       │                 const galleryContainer = document.querySelector(selector)
+│       │                 if(!galleryContainer) return
+│       │             
+│       │                 const observer = new IntersectionObserver((entries) => {
+│       │                     entries.forEach(entry => {
+│       │                         if(entry.isIntersecting) slideshow.stop()
+│       │                         // accessing the config inside the function prevents desync if user changes slideshow interval while looking at gallery
+│       │                         else slideshow.start(config.slideshowInterval)
+│       │                     })
+│       │                 }, {
+│       │                     threshold: 0.1
+│       │                 })
+│       │             
+│       │                 observer.observe(galleryContainer)
+│       │             }
+│       ├── main.ts
+│       │       |
+│       │          ** CONTENT **
+│       │             import { galleryDivDisplay, getConfig, configHandler, setupNavigationRouting, syncSlideshowWithGalleryVisibility } from './lib.js'
+│       │             import { Slideshow } from './slideshow.js'
+│       │             import { Gallery } from './gallery.js'
+│       │             import { Content } from './content.js'
+│       │             import { Config } from './config.js'
+│       │             
+│       │             export async function initSite() {
+│       │                 const config = await getConfig('src/data/config.json')
+│       │                 const content = new Content(config.web.title, config.server.version, config.web.navigation, config.server.ip, config.web.staff)
+│       │                 const imgCdnBase = "https://cdn.jsdelivr.net/gh/dominicgena/sundown-image-uploads@main/img/"
+│       │                 const format = config.web.gallery_format.name
+│       │                 document.addEventListener('headerReady', setupNavigationRouting)
+│       │                 content.populate()
+│       │             
+│       │                 const gallery = new Gallery(config.web.gallery)
+│       │                 const slideshow = new Slideshow(gallery, imgCdnBase, config.web.gallery_format.name)
+│       │                 galleryDivDisplay(gallery, imgCdnBase, format)
+│       │                 const personalization = new Config('/assets/ui/sundown_beach.avif', 10000, slideshow)
+│       │                 configHandler(personalization, config.web.logo)
+│       │                 syncSlideshowWithGalleryVisibility('.gallery-container', slideshow, personalization)
+│       │             }
+│       └── slideshow.ts
+│               |
+│                  ** CONTENT **
+│                     interface Gallery {
+│                         length: number
+│                         getUrl(index: number, baseUrl: string, ext: string): string
+│                         getRandomIndex(currentIndex: number): number
+│                     }
+│                     
+│                     export class Slideshow {
+│                         private currentIndex: number = 0
+│                         private timer: number | null = null
+│                         private layerCurrent: HTMLImageElement
+│                         private layerNext: HTMLImageElement
+│                         private gallery: Gallery
+│                         private baseUrl: string
+│                         private format: string
+│                         private transitionTimer: number | null = null
+│                         private isRunning: boolean = false
+│                     
+│                         constructor(gallery: Gallery, baseUrl: string, format: string) {
+│                             this.gallery = gallery
+│                             this.baseUrl = baseUrl
+│                             this.format = format
+│                     
+│                             // select existing images from the html
+│                             this.layerCurrent = document.getElementById('layer-current') as HTMLImageElement
+│                             this.layerNext = document.getElementById('layer-next') as HTMLImageElement
+│                     
+│                             // initialize first image immediately
+│                             this.currentIndex = this.gallery.getRandomIndex(-1)
+│                             this.initFirstImage()
+│                         }
+│                     
+│                         private initFirstImage() {
+│                             this.layerCurrent.src = this.gallery.getUrl(this.currentIndex, this.baseUrl, this.format)
+│                             this.layerCurrent.style.opacity = '1'
+│                             this.layerNext.style.opacity = '0'
+│                         }
+│                     
+│                         start(interval: number = 10000) {
+│                             this.stop()
+│                             if (interval == 0) return
+│                             this.isRunning = true
+│                     
+│                             this.timer = window.setInterval(() => {
+│                                 const nextIndex = this.gallery.getRandomIndex(this.currentIndex)
+│                                 const preloader = new Image()
+│                                 preloader.src = this.gallery.getUrl(nextIndex, this.baseUrl, this.format)
+│                                 
+│                                 preloader.onload = () => {
+│                                     // only proceed if the slideshow wasn't stopped while loading
+│                                     if (this.isRunning) {
+│                                         this.performTransition(preloader.src, nextIndex)
+│                                     }
+│                                 }
+│                             }, interval)
+│                         }
+│                     
+│                         private performTransition(newSrc: string, nextIndex: number) {
+│                             // prepare the hidden layer with the new image
+│                             this.layerNext.style.transition = 'none'
+│                             this.layerNext.src = newSrc
+│                             this.layerNext.style.opacity = '0'
+│                             this.layerNext.style.zIndex = '2'
+│                             this.layerCurrent.style.zIndex = '1'
+│                     
+│                             // trigger reflow so the 'none' transition and opacity 0 take effect
+│                             this.layerNext.offsetHeight
+│                     
+│                             // fade it in
+│                             this.layerNext.style.transition = 'opacity 5s ease-in-out'
+│                             this.layerNext.style.opacity = '1'
+│                     
+│                             this.transitionTimer = window.setTimeout(() => {
+│                                 if (!this.isRunning) return
+│                                 
+│                                 const temp = this.layerCurrent
+│                                 this.layerCurrent = this.layerNext
+│                                 this.layerNext = temp
+│                     
+│                                 // move the 'new' current to the bottom of the stack so 
+│                                 // the 'new' next can be prepared on top of it next time.
+│                                 this.layerCurrent.style.zIndex = '1'
+│                                 this.layerNext.style.zIndex = '0'
+│                                 this.layerNext.style.opacity = '0'
+│                     
+│                                 this.currentIndex = nextIndex
+│                                 this.transitionTimer = null
+│                             }, 5000)
+│                         }
+│                     
+│                         stop() {
+│                             this.isRunning = false
+│                             if (this.timer) {
+│                                 clearInterval(this.timer)
+│                                 this.timer = null
+│                             }
+│                             if (this.transitionTimer) {
+│                                 clearTimeout(this.transitionTimer)
+│                                 this.transitionTimer = null
+│                             }
+│                             // reset layers to a clean state
+│                             this.layerNext.style.opacity = '0'
+│                         }
+│                     }
+└── tsconfig.json
+        |
+           ** CONTENT **
+              {
+                "compilerOptions": {
+                  /* Language and Environment */
+                  "target": "ES2022",
+                  "lib": ["DOM", "DOM.Iterable", "ESNext"],
+                  "module": "ESNext",
+                  
+                  /* Resolution Strategy */
+                  "moduleResolution": "node",
+                  "resolveJsonModule": true,
+                  "esModuleInterop": true,
+                  
+                  /* JavaScript Support */
+                  "allowJs": true,
+                  "checkJs": true,
+                  "maxNodeModuleJsDepth": 1,
+              
+                  /* Output Configuration */
+                  "outDir": "dist",
+                  "rootDir": "src/ts",
+                  "sourceMap": true,
+                  "forceConsistentCasingInFileNames": true,
+              
+                  /* Strictness */
+                  "strict": true,
+                  "noImplicitAny": true,
+                  "skipLibCheck": true
+                },
+                "include": [
+                  "src/ts/**/*"
+                ],
+                "exclude": [
+                  "node_modules",
+                  "dist"
+                ]
+              }

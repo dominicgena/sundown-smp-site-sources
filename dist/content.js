@@ -11,10 +11,17 @@ class Header {
         const titleElem = document.getElementById('server-title');
         const versionElem = document.getElementById('version');
         const navList = document.getElementById('nav-list');
+        const navbarDropBtn = document.getElementById('navbar-drop');
         if (titleElem)
             titleElem.innerText = this.title;
         if (versionElem)
             versionElem.innerText = this.version;
+        if (navbarDropBtn && navList) {
+            navbarDropBtn.addEventListener('click', () => {
+                navList.classList.toggle('show');
+                navbarDropBtn.classList.toggle('active');
+            });
+        }
         // loop through the options passed in the constructor and put them in the nav bar
         this.options.forEach((option) => {
             const li = document.createElement('li');
