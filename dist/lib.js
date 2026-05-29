@@ -39,6 +39,12 @@ export function navEventHandler(target) {
     const toggleables = document.querySelectorAll('.toggleable, .home');
     toggleables.forEach(toggleable => toggleable.classList.remove('active'));
     window.scrollTo({ top: 0, behavior: 'smooth' });
+    const navList = document.getElementById('nav-list');
+    const navbarDropBtn = document.getElementById('navbar-drop');
+    if (navList?.classList.contains('show')) {
+        navList.classList.remove('show');
+        navbarDropBtn?.classList.remove('active');
+    }
     if (intent == 'home') {
         const homeSections = document.querySelectorAll('.home');
         homeSections.forEach(section => section.classList.add('active'));
