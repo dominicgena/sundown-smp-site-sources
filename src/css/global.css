@@ -47,6 +47,9 @@ div p {
 #layer-current { z-index: 1; }
 #layer-next { z-index: 2; }
 
+/* =========================================================
+   BASE HEADER (Desktop identical to your original)
+   ========================================================= */
 .header {
     overflow: visible;
     z-index: 10;
@@ -65,6 +68,7 @@ div p {
     width: 100%;
     top: 0;
     left: 0;
+    box-sizing: border-box;
 }
 
 .header a.title-group {
@@ -75,11 +79,16 @@ div p {
     justify-content: center;
     line-height: 1;
     text-decoration: none;
+    min-width: 0;
 }
 
 .header #navbar-drop {
     display: none;
-    margin-bottom: 1em;
+    background: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    padding: 0;
 }
 
 #version {
@@ -88,38 +97,138 @@ div p {
     text-align: center;
 }
 
+#server-title, #version {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
 .nav-menu ul {
     font-size: inherit;
     list-style-type: none;
     display: flex;
     margin: 0;
     align-items: center;
+    padding: 0;
 }
 
-.nav-menu ul li {
+/* =========================================================
+   DESKTOP: Flatten Categories (Desktop users see no change)
+   ========================================================= */
+.nav-category { display: contents; }
+.category-toggle { display: none; }
+.category-list { display: contents; }
+
+.nav-menu ul li, 
+.nav-menu ul .category-list li {
     padding: 3px 0 3px 0;
     margin-right: 10px;
 }
 
-.nav-menu ul li a {
+.nav-menu ul li a,
+.nav-menu ul .category-list li a {
     text-decoration: none;
     color: inherit;
     padding: 5px 10px;
+    white-space: nowrap;
 }
 
-.nav-menu ul li a:hover {
+.nav-menu ul li a:hover,
+.nav-menu ul .category-list li a:hover {
     transition: background-color .5s;
     background-color: rgb(134, 115, 190);
     padding-top: 15px;
     padding-bottom: 15px;
 }
 
-.category-toggle {
-    display: none; /* Hide the dropdown buttons on desktop */
-}
+/* =========================================================
+   MOBILE: Fixed Readability & Background Specificity
+   ========================================================= */
+@media screen and (max-width: 768px) {
+    .header {
+        height: auto;
+        padding: 15px 5%;
+    }
 
-.nav-category, .category-list {
-    display: contents; /* Magically strips the parent containers visually, making list items flow horizontally as siblings! */
+    .header #navbar-drop {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+    }
+
+    /* Target the ID directly and use !important to override other styles */
+    #nav-list {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: rgba(0, 0, 0, 0.5) !important; 
+        padding: 10px 0;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.8);
+        z-index: 999;
+    }
+
+    #nav-list.show { display: flex !important; }
+
+    #nav-list li {
+        margin-right: 0;
+        width: 100%;
+        text-align: center;
+        text-shadow: 1px 1px 2px black; /* Helps text pop against background */
+    }
+
+    /* Accordion Category Flow */
+    .nav-category {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .category-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: none;
+        border: none;
+        color: white;
+        font-family: inherit;
+        font-size: inherit;
+        padding: 15px;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    /* SVG Alignment */
+    .category-toggle svg {
+        margin-left: 8px;
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+        display: block;
+    }
+
+    .category-toggle.active svg {
+        transform: rotate(180deg);
+    }
+
+    /* Expanded Content */
+    .category-list {
+        display: none;
+        position: static;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgba(255,255,255,0.05); 
+    }
+
+    .category-list.show { display: flex !important; }
+    
+    .category-list li {
+        padding: 8px 0;
+    }
 }
 
 .logo {

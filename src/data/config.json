@@ -1,7 +1,7 @@
 {
     "server":{
         "title": "Sundown SMP",
-        "version": "1.21.11",
+        "version": "26.1.2",
         "ip": "mc.sundown.social",
         "status_api": "https://api.mcstatus.io/v2/status/java/sundown.social",
         "invite_link": "https://discord.gg/wExHHDzt3z"
@@ -15,7 +15,7 @@
             {"name": "Map", "url": "https://map.sundown.social/#world:9021:311:-6087:81:0:0:0:0:perspective", "target": "_blank", "category": "explore"},
             {"name": "Gallery", "url": "#gallery", "target": "_self"},
             {"name": "Rules", "url": "#rules", "target": "_self", "category": "join"},
-            {"name": "Vote", "url": "#vote", "target": "_self", "category": "join"},
+            {"name": "Vote", "url": "#vote", "target": "_self"},
             {"name": "Downloads", "url": "#downloads", "target": "_self", "category": "explore"}
         ],
         "logo": [
