@@ -178,6 +178,7 @@ button {
 }
 
 .cog-dropdown {
+    text-shadow: none;
     position: absolute;
     top: calc(100% + 15px);
     right: 0;
