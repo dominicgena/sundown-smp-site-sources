@@ -655,17 +655,22 @@ a.discord-name-link:hover {
     }
     
     #nav-list {
-        padding: 0;
-        display: flex; 
-        flex-direction: row;
-        align-items: center;
+        display: grid; 
+        grid-template-columns: 1fr 1fr;
+        gap: clamp(10px, 3vh, 20px) 10px;
+        justify-items: center;
         width: 100%;
+        padding: 0;
         max-height: 0;
         opacity: 0;
         visibility: hidden;
         overflow: hidden;
         transform: translateY(-15px);
         transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out, transform 0.3s ease-out, visibility 0.4s;
+    }
+
+    #nav-list li:first-child {/* If odd number of options, put home at the top */
+        grid-column: span 2; 
     }
 
     #nav-list.show {
@@ -697,11 +702,5 @@ a.discord-name-link:hover {
         bottom: auto;
         border-radius: 8px 0px 8px 8px;
         transform: translateY(-15px);
-    }
-}
-
-@media screen and (max-width: 704px) {
-    #nav-list {
-        flex-direction: column;
     }
 }
