@@ -11,12 +11,12 @@
         "title": "Sundown SMP",
         "navigation": [
             {"name": "Home", "url": "#home", "target": "_self"},
-            {"name": "Join", "url": "#join", "target": "_self", "category": "join"},
-            {"name": "Map", "url": "https://map.sundown.social/#world:9021:311:-6087:81:0:0:0:0:perspective", "target": "_blank", "category": "explore"},
             {"name": "Gallery", "url": "#gallery", "target": "_self"},
+            {"name": "Bluemap", "url": "https://map.sundown.social/#world:9021:311:-6087:81:0:0:0:0:perspective", "target": "_blank", "category": "explore"},
             {"name": "Rules", "url": "#rules", "target": "_self", "category": "join"},
-            {"name": "Vote", "url": "#vote", "target": "_self"},
-            {"name": "Downloads", "url": "#downloads", "target": "_self", "category": "explore"}
+            {"name": "Join", "url": "#join", "target": "_self", "category": "join"},
+            {"name": "Downloads", "url": "#downloads", "target": "_self", "category": "explore"},
+            {"name": "Vote", "url": "#vote", "target": "_self"}
         ],
         "logo": [
             {"text": "Beach", "for": "sundown-beach","id": "sundown-beach", "value": "/assets/ui/sundown_beach.avif"},
