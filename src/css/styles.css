@@ -58,8 +58,13 @@ p {
 #layer-current { z-index: 1; }
 #layer-next { z-index: 2; }
 
-div.header {
+header#header {
     position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+div.header {
     top: 0;
     z-index: 4;
     overflow: visible;
