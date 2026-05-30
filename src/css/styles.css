@@ -429,7 +429,7 @@ button.cycle-img {
     scale: 1.2;
 }
 
-#active-gallery-image, .season-preview-image {
+#active-gallery-image {
     width: 100%;
     max-width: 100%;
     height: auto;
@@ -438,25 +438,47 @@ button.cycle-img {
     margin-bottom: 20px;
 }
 
-/* Download Buttons for Season Worlds */
+.download-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 30px;
+}
+
+[class^="download-season-"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.season-preview-image {
+    width: 90%;
+    max-width: 500px;
+    border-radius: 8px;
+    margin: 15px 0;
+    display: block;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
 .download-link-btn {
     display: inline-block;
-    margin-top: 15px;
-    padding: 10px 20px;
-    background-color: transparent;
-    border: 2px solid var(--scheme-accent-color);
-    color: var(--scheme-accent-color);
-    text-decoration: none !important;
-    font-family: var(--content-font-minecraft);
-    font-size: 1.5rem;
-    border-radius: 6px;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    cursor: pointer;
+    border: 2px solid #e6a13c;
+    color: white;
+    text-decoration: none;
+    padding: 10px 24px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-family: inherit;
+    transition: all 0.2s ease-in-out;
+    margin-bottom: 10px;
 }
 
 .download-link-btn:hover {
-    background-color: var(--scheme-accent-color);
-    color: #000;
+    background-color: #e6a13c;
+    color: #1a1a1a;
 }
 
 /* ------------------------------------------------ FOOTER ------------------------------------------------ */

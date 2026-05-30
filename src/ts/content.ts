@@ -1,3 +1,5 @@
+import { Gallery } from './gallery.js';
+
 interface NavOption {
     name: string
     url: string
@@ -173,16 +175,74 @@ class Footer {
     }
 }
 
-export class Content {
-    public header: Header
-    public footer: Footer
-    constructor(title: string, version: string, options: [], address: string, staff: []) {
-        this.header = new Header(title, "Version " + version, options)
-        this.footer = new Footer(address, staff)
+export interface DownloadItem {
+    season: number | string;
+    download: string;
+}
+
+export class Downloads {
+    private downloadsList: DownloadItem[];
+
+    constructor(downloadsList: DownloadItem[]) {
+        this.downloadsList = downloadsList;
     }
 
-    populate(): void {
-        this.header.populate()
-        this.footer.populate()
+    populate(gallery: Gallery): void {
+        const container = document.querySelector('.downloads') as HTMLDivElement;
+        if (!container) return;
+
+        const heading = document.createElement('h1');
+        heading.innerText = 'World Downloads';
+        container.appendChild(heading);
+
+        const itemsWrapper = document.createElement('div');
+        itemsWrapper.classList.add('download-items');
+
+        this.downloadsList.forEach((downloadItem: DownloadItem) => {
+            const seasonCard = document.createElement('div');
+            seasonCard.classList.add(`download-season-${downloadItem.season}`);
+
+            const seasonTitle = document.createElement('h2');
+            seasonTitle.innerText = 'Season ' + downloadItem.season;
+            seasonCard.appendChild(seasonTitle);
+
+            const previewImg = document.createElement('img') as HTMLImageElement;
+            previewImg.className = 'season-preview-image';
+            
+            // Grabs a random image index filtered by the specific season string/number
+            const imageIndex = gallery.getRandomIndex(-1, downloadItem.season as number);
+            
+            previewImg.src = gallery.getUrl(imageIndex, "https://cdn.jsdelivr.net/gh/dominicgena/sundown-image-uploads@main/img", "avif"); 
+            seasonCard.appendChild(previewImg);
+
+            const downloadBtn = document.createElement('a') as HTMLAnchorElement;
+            downloadBtn.href = downloadItem.download;
+            downloadBtn.target = '_blank';
+            downloadBtn.innerText = 'Download World';
+            downloadBtn.className = 'download-link-btn';
+            seasonCard.appendChild(downloadBtn);
+
+            itemsWrapper.appendChild(seasonCard);
+        });
+
+        container.appendChild(itemsWrapper);
+    }
+}
+
+export class Content {
+    public header: Header;
+    public downloads: Downloads;
+    public footer: Footer;
+
+    constructor(title: string, version: string, navOptions: [], downloadsData: DownloadItem[], address: string, staff: []) {
+        this.header = new Header(title, "Version " + version, navOptions);
+        this.footer = new Footer(address, staff);
+        this.downloads = new Downloads(downloadsData);
+    }
+
+    populate(gallery: Gallery): void {
+        this.header.populate();
+        this.downloads.populate(gallery);
+        this.footer.populate();
     }
 }

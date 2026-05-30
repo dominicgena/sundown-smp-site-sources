@@ -58,6 +58,9 @@ export function navEventHandler(target) {
     else if (intent == 'rules') {
         document.querySelector('.rules')?.classList.add('active');
     }
+    else if (intent == 'downloads' || intent == 'map downloads') { // <--- Added 'map downloads' here
+        document.querySelector('.downloads')?.classList.add('active');
+    }
 }
 export function galleryDivDisplay(gallery, imgCdnBase, format = 'avif') {
     const galleryElem = document.querySelector('.gallery');

@@ -15,7 +15,7 @@
             {"name": "Bluemap", "url": "https://map.sundown.social/#world:9021:311:-6087:81:0:0:0:0:perspective", "target": "_blank", "category": "explore"},
             {"name": "Rules", "url": "#rules", "target": "_self", "category": "join"},
             {"name": "Join", "url": "#join", "target": "_self", "category": "join"},
-            {"name": "Downloads", "url": "#downloads", "target": "_self", "category": "explore"},
+            {"name": "Map Downloads", "url": "#downloads", "target": "_self", "category": "explore"},
             {"name": "Vote", "url": "#vote", "target": "_self"}
         ],
         "logo": [
@@ -48,6 +48,10 @@
             {"name": "gal-s1-prs0n-forest-mansion-20260510", "altText": "Prs0n's beautiful large taiga mansion and farm"}
         ],
 
+        "downloads": [
+            {"season": 1, "download": "https://drive.google.com/file/d/1ExQUZP-tztxZdmd6IxkvfT0vHjdftXWD/view?usp=sharing"}
+        ],
+        
         "staff": [
         {"name": "chonkleblorp", "url": "https://discord.com/users/1200315477013049414", "rankRoles": ["SMP Owner and admin, website developer, administrator, moderator", "Shooting Stars", "Starlings"]},
         {"name": "Tthe_Nerdy", "url": "https://discord.com/users/583838117870567426", "rankRoles": ["Discord server owner, moderator, administrator", "Supernova", "Shooting Stars", "Starlings"]},

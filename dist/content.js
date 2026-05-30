@@ -136,15 +136,55 @@ class Footer {
         });
     }
 }
+export class Downloads {
+    downloadsList;
+    constructor(downloadsList) {
+        this.downloadsList = downloadsList;
+    }
+    populate(gallery) {
+        const container = document.querySelector('.downloads');
+        if (!container)
+            return;
+        const heading = document.createElement('h1');
+        heading.innerText = 'World Downloads';
+        container.appendChild(heading);
+        const itemsWrapper = document.createElement('div');
+        itemsWrapper.classList.add('download-items');
+        this.downloadsList.forEach((downloadItem) => {
+            const seasonCard = document.createElement('div');
+            seasonCard.classList.add(`download-season-${downloadItem.season}`);
+            const seasonTitle = document.createElement('h2');
+            seasonTitle.innerText = 'Season ' + downloadItem.season;
+            seasonCard.appendChild(seasonTitle);
+            const previewImg = document.createElement('img');
+            previewImg.className = 'season-preview-image';
+            // Grabs a random image index filtered by the specific season string/number
+            const imageIndex = gallery.getRandomIndex(-1, downloadItem.season);
+            previewImg.src = gallery.getUrl(imageIndex, "https://cdn.jsdelivr.net/gh/dominicgena/sundown-image-uploads@main/img", "avif");
+            seasonCard.appendChild(previewImg);
+            const downloadBtn = document.createElement('a');
+            downloadBtn.href = downloadItem.download;
+            downloadBtn.target = '_blank';
+            downloadBtn.innerText = 'Download World';
+            downloadBtn.className = 'download-link-btn';
+            seasonCard.appendChild(downloadBtn);
+            itemsWrapper.appendChild(seasonCard);
+        });
+        container.appendChild(itemsWrapper);
+    }
+}
 export class Content {
     header;
+    downloads;
     footer;
-    constructor(title, version, options, address, staff) {
-        this.header = new Header(title, "Version " + version, options);
+    constructor(title, version, navOptions, downloadsData, address, staff) {
+        this.header = new Header(title, "Version " + version, navOptions);
         this.footer = new Footer(address, staff);
+        this.downloads = new Downloads(downloadsData);
     }
-    populate() {
+    populate(gallery) {
         this.header.populate();
+        this.downloads.populate(gallery);
         this.footer.populate();
     }
 }

@@ -55,6 +55,8 @@ export function navEventHandler(target: HTMLAnchorElement) {
         document.querySelector('.gallery-container')?.classList.add('active')
     } else if (intent == 'rules') {
         document.querySelector('.rules')?.classList.add('active')
+    } else if (intent == 'downloads' || intent == 'map downloads') { // <--- Added 'map downloads' here
+        document.querySelector('.downloads')?.classList.add('active')
     }
 }
 
