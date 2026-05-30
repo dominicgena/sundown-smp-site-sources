@@ -446,6 +446,14 @@ button.cycle-img {
     gap: 30px;
 }
 
+#image-description {
+    padding: 0 20px;
+    max-width: 90%;
+    line-height: 1.4;
+    margin: 0 auto 20px auto;
+    word-wrap: break-word;
+}
+
 [class^="download-season-"] {
     display: flex;
     flex-direction: column;
@@ -461,6 +469,10 @@ button.cycle-img {
     margin: 15px 0;
     display: block;
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+a.download-link-btn {
+    text-decoration: none;
 }
 
 .download-link-btn {

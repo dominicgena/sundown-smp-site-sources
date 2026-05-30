@@ -1,9 +1,23 @@
 export class Gallery extends Array {
     constructor(images = []) {
         super(...images);
+        this.sortByDateDescending(); // new - sort the images for the gallery display by date
     }
     sortAlphabetically() {
         this.sort((a, b) => a.name.localeCompare(b.name));
+    }
+    sortByDateDescending() {
+        this.sort((a, b) => {
+            // Split the string by hyphens and grab the last element (the date)
+            // Fallback to "0" just in case a filename doesn't match the convention
+            const dateStrA = a.name.split('-').pop() || "0";
+            const dateStrB = b.name.split('-').pop() || "0";
+            // Parse them as base-10 integers
+            const dateA = parseInt(dateStrA, 10);
+            const dateB = parseInt(dateStrB, 10);
+            // Return B - A for descending order (most recent first)
+            return dateB - dateA;
+        });
     }
     // helper function to get the URL of any image
     getUrl(index, baseUrl, ext) {
