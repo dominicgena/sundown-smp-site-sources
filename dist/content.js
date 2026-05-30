@@ -22,62 +22,16 @@ class Header {
                 navbarDropBtn.classList.toggle('active');
             });
         }
-        const groups = new Map();
-        const order = []; // Preserves insertion order
-        // loop through the options passed in the constructor and put them in the nav bar
         this.options.forEach((option) => {
-            const cat = option.category || 'none'; // 'none' for standalone items like Home
-            if (!groups.has(cat)) {
-                groups.set(cat, []);
-                order.push(cat);
-            }
-            groups.get(cat).push(option);
-        });
-        order.forEach(cat => {
-            if (cat === 'none') {
-                // Render standalone items directly into the navList
-                groups.get(cat).forEach(option => {
-                    const li = document.createElement('li');
-                    li.id = option.name.toLowerCase().replace(/\s+/g, '-');
-                    const link = document.createElement('a');
-                    link.innerText = option.name;
-                    link.href = option.url;
-                    link.target = option.target;
-                    li.appendChild(link);
-                    navList.appendChild(li);
-                });
-            }
-            else {
-                // Render category container for mobile
-                const catLi = document.createElement('li');
-                catLi.className = 'nav-category';
-                // Category Toggle Button
-                const btn = document.createElement('button');
-                btn.className = 'category-toggle';
-                btn.innerHTML = `${cat} <svg width="12" height="8" viewBox="0 0 16 8"><path fill="currentColor" d="M0.9 -0.1c0.9 0 1.3 0.4 1.9 1l0.3 0.3c0.2 0.2 0.3 0.3 0.5 0.4l0.2 0.2q0.6 0.5 1.2 1a76 76 0 0 1 1.2 1q0.1 0.1 0.3 0.2c0.2 0.1 0.3 0.3 0.5 0.4l0.2 0.2 0.2 0.2c0.2 0.2 0.4 0.3 0.7 0.4l0.3 -0.3c0.8 -0.7 1.5 -1.4 2.3 -2.1 0.4 -0.4 0.9 -0.8 1.3 -1.1 0.5 -0.5 1.1 -1 1.7 -1.4 0.3 -0.2 0.3 -0.2 0.5 -0.5 0.3 0 0.3 0 0.8 0l0.4 0c0.3 0.2 0.3 0.2 0.6 0.2a2.8 2.8 0 0 1 0 1.4c-0.4 0.5 -0.8 0.8 -1.3 1.1q-0.3 0.3 -0.7 0.6 -0.2 0.1 -0.3 0.3a27 27 0 0 0 -1.6 1.3c-0.6 0.5 -1.1 1 -1.7 1.5a29.5 29.5 0 0 0 -1 0.9q-0.2 0.1 -0.3 0.3a11 11 0 0 0 -0.5 0.5c-0.3 0.3 -0.7 0.5 -1.1 0.5 -0.9 0 -1.4 -0.8 -2 -1.4q-0.3 -0.3 -0.7 -0.6a27.5 27.5 0 0 1 -1.4 -1.1 32.5 32.5 0 0 0 -1.8 -1.5 33 33 0 0 1 -1.3 -1.2c-0.3 -0.2 -0.3 -0.2 -0.6 -0.4c-0.3 -0.2 -0.3 -0.2 -0.4 -0.5l0 -0.4c0 -0.1 0 -0.2 0 -0.4c0 -0.1 0.4 -0.1 0.9 -0.1"/></svg>`;
-                // Sub-list containing the actual links
-                const subList = document.createElement('ul');
-                subList.className = 'category-list';
-                groups.get(cat).forEach(option => {
-                    const li = document.createElement('li');
-                    li.id = option.name.toLowerCase().replace(/\s+/g, '-');
-                    const link = document.createElement('a');
-                    link.innerText = option.name;
-                    link.href = option.url;
-                    link.target = option.target;
-                    li.appendChild(link);
-                    subList.appendChild(li);
-                });
-                // Mobile toggle event
-                btn.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    btn.classList.toggle('active');
-                    subList.classList.toggle('show');
-                });
-                catLi.appendChild(btn);
-                catLi.appendChild(subList);
-                navList.appendChild(catLi);
-            }
+            const li = document.createElement('li');
+            const link = document.createElement('a');
+            // access the name, url, and target properties directly through the interface
+            li.id = option.name.toLowerCase();
+            link.innerText = option.name;
+            link.href = option.url;
+            link.target = option.target;
+            li.appendChild(link);
+            navList.appendChild(li);
         });
         const readyEvent = new CustomEvent('headerReady', {
             bubbles: true,
