@@ -689,6 +689,15 @@ a.discord-name-link:hover {
         cursor: pointer;
     }
 
+    #navbar-drop svg {
+        transition: transform 0.3s ease-in-out;
+        transform-origin: center;
+    }
+
+    #navbar-drop.active svg {
+        transform: rotate(-180deg);
+    }
+
     .personalization-config {
         position: absolute;
         top: calc(100% + 15px);
