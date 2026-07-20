@@ -1,12 +1,15 @@
 import urllib.request
 import json
 
-class HtmlBuilder:
-    def __init__(self):
+class HtmlPopulator:
+    def __init__(self, file_name):
         # global config
-        self.html = self.populate_html_placeholders()
+        self.html = self.populate_html_placeholders(file_name)
 
-    def populate_html_placeholders(self):
+    def __str__(self):
+        return self.html
+
+    def populate_html_placeholders(self, file_name):
         config = json.load(open('../src/data/config.json'))
         CONFIG_WEB: dict = dict.get(config, "web")
         CONFIG_SERVER: dict = dict.get(config, "server")
@@ -18,10 +21,15 @@ class HtmlBuilder:
         logos = self.generate_logo_options(list(dict.get(CONFIG_WEB, "logo")))
         downloads = self.generate_download_options(list(dict.get(CONFIG_WEB, "downloads")))
         staff = self.generate_staff_list(list(dict.get(CONFIG_WEB, "staff")))
+        inv_link = CONFIG_SERVER.get("invite_link")
 
         html = ''
-        with open('../index.html', 'r') as file:
+        with open(f'../{file_name}', 'r') as file:
             html = file.read()
+
+        if file_name == 'discord.html':
+            html = html.replace("{{ INVITE_LINK }}", inv_link)
+            return html
 
         html = html.replace("{{ SERVER_TITLE }}", title)
         html = html.replace("{{ SERVER_VERSION }}", version)
@@ -115,7 +123,3 @@ class HtmlBuilder:
         except Exception as e:
             print(f"Warning: Could not fetch version from API ({e})")
             return "Unknown"
-
-if __name__ == "__main__":
-    html = HtmlBuilder().html
-    print(html)
