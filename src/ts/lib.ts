@@ -10,10 +10,7 @@ export async function getConfig(configFile: string) {
     }
 }
 
-export function setupNavigationRouting(event: Event) {
-    const contentReadyEvent = event as CustomEvent
-    const { type, element, instance } = contentReadyEvent.detail
-
+export function setupNavigationRouting() {
     document.addEventListener('click', (e) => {
         const target = (e.target as HTMLElement).closest('a')
         if (target && target.hash) {
@@ -22,16 +19,6 @@ export function setupNavigationRouting(event: Event) {
             navEventHandler(target)
         }
     })
-
-    const routingSetupEvent = new CustomEvent('navRoutingSetup', {
-        detail: {
-            type: 'navigation',
-            timestamp: Date.now(),
-            source: element
-        },
-        bubbles: true
-    })
-    document.dispatchEvent(routingSetupEvent)
 }
 
 export function navEventHandler(target: HTMLAnchorElement) {
@@ -55,7 +42,7 @@ export function navEventHandler(target: HTMLAnchorElement) {
         document.querySelector('.gallery-container')?.classList.add('active')
     } else if (intent == 'rules') {
         document.querySelector('.rules')?.classList.add('active')
-    } else if (intent == 'downloads' || intent == 'map downloads') { // <--- Added 'map downloads' here
+    } else if (intent == 'downloads' || intent == 'map-downloads') {
         document.querySelector('.downloads')?.classList.add('active')
     }
 }
@@ -110,7 +97,6 @@ interface Logo {
 }
 
 export function configHandler(config: Config, logos: Array<Logo>) {
-    populateLogoOptions(logos)
     const personalizationContainerElem = document.querySelector('.personalization-config') as HTMLDivElement
     const dropdownElem = document.querySelector('.cog-dropdown') as HTMLDivElement
     closePopupOnOutsideClick(dropdownElem, personalizationContainerElem)
@@ -143,42 +129,6 @@ function closePopupOnOutsideClick(dropdownElem: HTMLDivElement, personalizationC
     })
 }
 
-function populateLogoOptions(logos: Array<Logo>) {
-    const logoSelectionElement = document.getElementById('logo-selection') as HTMLDivElement
-    
-    // 1. Clear the div but immediately re-add the header
-    logoSelectionElement.innerHTML = '<h3 class="menu-section-header">Logo</h3>'
-
-    logos.forEach((logo) => {
-        const labelElem = document.createElement('label') as HTMLLabelElement
-        labelElem.htmlFor = logo.for
-
-        const inputElem = document.createElement('input') as HTMLInputElement
-        inputElem.id = logo.id
-        inputElem.name = 'sundown-logo'
-        inputElem.type = 'radio'
-        inputElem.value = logo.value
-
-        if (logo.id === 'mountains-1') { 
-            inputElem.checked = true 
-        }
-
-        const spanElem = document.createElement('span') as HTMLSpanElement
-        spanElem.classList.add('radio-custom')
-        spanElem.classList.add(logo.for)
-
-        // 2. DOM ORDER: input first, then span (critical for the CSS + selector)
-        labelElem.appendChild(inputElem)
-        labelElem.appendChild(spanElem)
-        
-        // Add the text label
-        labelElem.appendChild(document.createTextNode(` ${logo.text}`))
-        
-        logoSelectionElement.appendChild(labelElem)
-        logoSelectionElement.appendChild(document.createElement('br'))
-    })
-}
-
 interface Slideshow {
     stop(): void
     start(interval: number): void
@@ -199,4 +149,30 @@ export function syncSlideshowWithGalleryVisibility(selector: string, slideshow: 
     })
 
     observer.observe(galleryContainer)
+}
+
+export function attachStaticListeners() {
+    const ipText = document.querySelector('.ip-text') as HTMLElement
+    ipText?.addEventListener('click', () => {
+        const ip = ipText.innerText
+        navigator.clipboard.writeText(ip)
+        ipText.innerText = "Copied!"
+        setTimeout(() => ipText.innerText = ip, 2000)
+    })
+
+    document.querySelectorAll('.staff-expand, .expand-roles').forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('active')
+            btn.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        })
+    })
+}
+
+export function initUI() {
+    const navbarDropBtn = document.getElementById('navbar-drop')
+    const navList = document.getElementById('nav-list')
+    navbarDropBtn?.addEventListener('click', () => {
+        navList?.classList.toggle('show')
+        navbarDropBtn.classList.toggle('active')
+    })
 }

@@ -1,5 +1,6 @@
 export function initDiscordPage() {
-    const inviteLink = "https://discord.gg/wExHHDzt3z";
+    const manualBtn = document.getElementById('manual-join-btn');
+    const inviteLink = manualBtn ? manualBtn.href : "/";
     const countdownElem = document.getElementById('countdown');
     const tabTitle = document.getElementById('tabbar-title');
     let seconds = 5;

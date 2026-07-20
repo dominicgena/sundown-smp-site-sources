@@ -5,7 +5,9 @@ export class Config {
     constructor(path, slideshowInterval, slideshow) {
         this.slideshow = slideshow;
         this.slideshowInterval = slideshowInterval;
-        this.logo = this.setLogo(path);
+        const checkedRadio = document.querySelector('input[name="sundown-logo"]:checked');
+        const initialPath = checkedRadio ? checkedRadio.value : "/assets/ui/sundown_mountains1.avif";
+        this.logo = this.setLogo(initialPath);
         // stop any current execution and re-initialize with the new interval
         this.slideshow.stop();
         this.slideshow.start(this.slideshowInterval);

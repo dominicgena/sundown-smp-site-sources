@@ -46,14 +46,16 @@
             <div class="header">
                 <div>
                     <a href="index.html" class="title-group">
-                        <div id="server-title">Sundown SMP</div>
-                        <div id="version">Loading version ...</div>
+                        <div id="server-title">{{ SERVER_TITLE }}</div>
+                        <div id="version">Version {{ SERVER_VERSION }}</div>
                     </a>
                     <button id="navbar-drop"><?xml version="1.0" encoding="UTF-8"?><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6"/></svg></button>
                 </div>
                 <div class="nav-menu">
                     <nav class="nav-menu" id="nav-menu">
-                        <ul id="nav-list"></ul>
+                        <ul id="nav-list">
+                            {{ NAV_ELEMENTS }}
+                        </ul>
                     </nav>
                 </div>
                 <div class="personalization-config global">
@@ -87,7 +89,8 @@
                                     <span class="radio-custom 60s"></span>&nbsp;60 Seconds
                                 </label><br>
                                 <div id="logo-selection">
-                                    <h3>Logo</h3>
+                                    <h3 class="menu-selection-header">Logo</h3>
+                                    {{ LOGO_OPTIONS }}
                                 </div>
                             </form>
                         </div>
@@ -188,7 +191,12 @@
             </div>
         </div>
 
-        <div class="content content-box downloads toggleable"></div>
+        <div class="content content-box downloads toggleable">
+            <h1>World Downloads</h1>
+            <div class="download-items">
+                {{ DOWNLOADS_SECTION }}
+            </div>
+        </div>
 
         <div class="content-box home">
             <div class="content welcome-message">
@@ -325,11 +333,23 @@
         </div>
 
         <footer class="main-footer">
-            <div id="footer-server-ip"><h2>Server IP</h2></div>
+            <div id="footer-server-ip">
+                <h2>Server IP</h2>
+                <h3><span class="ip-text" title="Click to copy IP">{{ SERVER_IP }}</span></h3>
+            </div>
             <div id="support"><h2>Support</h2><p>Expand staff and reach out to any member by clicking their profile link, or click<a href="https://discord.com/users/1200315477013049414" target="_blank"><span>here</span></a>to contact the SMP owner directly</p></div>
             <div id="legal-and-compliance"><h2>Legal and Compliance</h2>
             <p id="disclaimer">Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft</p></div>
-            <br><br><div id="staff-header"><h2>Staff</h2></div>
+            <br><br>
+            <div id="staff-header">
+                <h2>Staff</h2>
+                <button class="staff-expand" title="Toggle Staff List">
+                    <svg width="16" height="8" viewBox="0 0 16 8"><g><path style="fill:rgb(92%,92%,92%);" d="M0.9 -0.1c0.9 0 1.3 0.4 1.9 1l0.3 0.3c0.2 0.2 0.3 0.3 0.5 0.4l0.2 0.2q0.6 0.5 1.2 1a76 76 0 0 1 1.2 1q0.1 0.1 0.3 0.2c0.2 0.1 0.3 0.3 0.5 0.4l0.2 0.2 0.2 0.2c0.2 0.2 0.4 0.3 0.7 0.4l0.3 -0.3c0.8 -0.7 1.5 -1.4 2.3 -2.1 0.4 -0.4 0.9 -0.8 1.3 -1.1 0.5 -0.5 1.1 -1 1.7 -1.4 0.3 -0.2 0.3 -0.2 0.5 -0.5 0.3 0 0.3 0 0.8 0l0.4 0c0.3 0.2 0.3 0.2 0.6 0.2a2.8 2.8 0 0 1 0 1.4c-0.4 0.5 -0.8 0.8 -1.3 1.1q-0.3 0.3 -0.7 0.6 -0.2 0.1 -0.3 0.3a27 27 0 0 0 -1.6 1.3c-0.6 0.5 -1.1 1 -1.7 1.5a29.5 29.5 0 0 0 -1 0.9q-0.2 0.1 -0.3 0.3a11 11 0 0 0 -0.5 0.5c-0.3 0.3 -0.7 0.5 -1.1 0.5 -0.9 0 -1.4 -0.8 -2 -1.4q-0.3 -0.3 -0.7 -0.6a27.5 27.5 0 0 1 -1.4 -1.1 32.5 32.5 0 0 0 -1.8 -1.5 33 33 0 0 1 -1.3 -1.2c-0.3 -0.2 -0.3 -0.2 -0.6 -0.4c-0.3 -0.2 -0.3 -0.2 -0.4 -0.5l0 -0.4c0 -0.1 0 -0.2 0 -0.4c0 -0.1 0.4 -0.1 0.9 -0.1"/></g></svg>
+                </button>
+            </div>
+            <div class="staff-list">
+                {{ STAFF_LIST }}
+            </div>
         </footer>
         
         <script class="entrypoint" src="/dist/bundle-entry.js" type="module"></script>

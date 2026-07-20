@@ -12,9 +12,7 @@ export async function getConfig(configFile) {
         throw error;
     }
 }
-export function setupNavigationRouting(event) {
-    const contentReadyEvent = event;
-    const { type, element, instance } = contentReadyEvent.detail;
+export function setupNavigationRouting() {
     document.addEventListener('click', (e) => {
         const target = e.target.closest('a');
         if (target && target.hash) {
@@ -24,15 +22,6 @@ export function setupNavigationRouting(event) {
             navEventHandler(target);
         }
     });
-    const routingSetupEvent = new CustomEvent('navRoutingSetup', {
-        detail: {
-            type: 'navigation',
-            timestamp: Date.now(),
-            source: element
-        },
-        bubbles: true
-    });
-    document.dispatchEvent(routingSetupEvent);
 }
 export function navEventHandler(target) {
     const intent = target.parentElement.id;
@@ -58,7 +47,7 @@ export function navEventHandler(target) {
     else if (intent == 'rules') {
         document.querySelector('.rules')?.classList.add('active');
     }
-    else if (intent == 'downloads' || intent == 'map downloads') { // <--- Added 'map downloads' here
+    else if (intent == 'downloads' || intent == 'map-downloads') {
         document.querySelector('.downloads')?.classList.add('active');
     }
 }
@@ -89,7 +78,6 @@ export function galleryDivDisplay(gallery, imgCdnBase, format = 'avif') {
     });
 }
 export function configHandler(config, logos) {
-    populateLogoOptions(logos);
     const personalizationContainerElem = document.querySelector('.personalization-config');
     const dropdownElem = document.querySelector('.cog-dropdown');
     closePopupOnOutsideClick(dropdownElem, personalizationContainerElem);
@@ -121,33 +109,6 @@ function closePopupOnOutsideClick(dropdownElem, personalizationContainerElem) {
             dropdownElem.classList.remove('active');
     });
 }
-function populateLogoOptions(logos) {
-    const logoSelectionElement = document.getElementById('logo-selection');
-    // 1. Clear the div but immediately re-add the header
-    logoSelectionElement.innerHTML = '<h3 class="menu-section-header">Logo</h3>';
-    logos.forEach((logo) => {
-        const labelElem = document.createElement('label');
-        labelElem.htmlFor = logo.for;
-        const inputElem = document.createElement('input');
-        inputElem.id = logo.id;
-        inputElem.name = 'sundown-logo';
-        inputElem.type = 'radio';
-        inputElem.value = logo.value;
-        if (logo.id === 'mountains-1') {
-            inputElem.checked = true;
-        }
-        const spanElem = document.createElement('span');
-        spanElem.classList.add('radio-custom');
-        spanElem.classList.add(logo.for);
-        // 2. DOM ORDER: input first, then span (critical for the CSS + selector)
-        labelElem.appendChild(inputElem);
-        labelElem.appendChild(spanElem);
-        // Add the text label
-        labelElem.appendChild(document.createTextNode(` ${logo.text}`));
-        logoSelectionElement.appendChild(labelElem);
-        logoSelectionElement.appendChild(document.createElement('br'));
-    });
-}
 export function syncSlideshowWithGalleryVisibility(selector, slideshow, config) {
     const galleryContainer = document.querySelector(selector);
     if (!galleryContainer)
@@ -164,5 +125,28 @@ export function syncSlideshowWithGalleryVisibility(selector, slideshow, config) 
         threshold: 0.1
     });
     observer.observe(galleryContainer);
+}
+export function attachStaticListeners() {
+    const ipText = document.querySelector('.ip-text');
+    ipText?.addEventListener('click', () => {
+        const ip = ipText.innerText;
+        navigator.clipboard.writeText(ip);
+        ipText.innerText = "Copied!";
+        setTimeout(() => ipText.innerText = ip, 2000);
+    });
+    document.querySelectorAll('.staff-expand, .expand-roles').forEach(btn => {
+        btn.addEventListener('click', () => {
+            btn.classList.toggle('active');
+            btn.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+    });
+}
+export function initUI() {
+    const navbarDropBtn = document.getElementById('navbar-drop');
+    const navList = document.getElementById('nav-list');
+    navbarDropBtn?.addEventListener('click', () => {
+        navList?.classList.toggle('show');
+        navbarDropBtn.classList.toggle('active');
+    });
 }
 //# sourceMappingURL=lib.js.map
