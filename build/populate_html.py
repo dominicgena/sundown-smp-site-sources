@@ -22,6 +22,8 @@ class HtmlPopulator:
         downloads = self.generate_download_options(list(dict.get(CONFIG_WEB, "downloads")))
         staff = self.generate_staff_list(list(dict.get(CONFIG_WEB, "staff")))
         inv_link = CONFIG_SERVER.get("invite_link")
+        vote = self.generate_vote_options(list(dict.get(CONFIG_WEB, "vote")))
+        vote_all = self.generate_vote_all_button(list(dict.get(CONFIG_WEB, "vote")))
 
         html = ''
         with open(f'../{file_name}', 'r') as file:
@@ -38,6 +40,8 @@ class HtmlPopulator:
         html = html.replace("{{ DOWNLOADS_SECTION }}", downloads)
         html = html.replace("{{ STAFF_LIST }}", staff)
         html = html.replace("{{ SERVER_IP }}", ip)
+        html = html.replace("{{ VOTE_OPTIONS }}", vote)
+        html = html.replace("{{ VOTE_ALL_BUTTON }}", vote_all)
         return html
 
     def generate_nav_elements(self, data: list[dict[str, str]]):
@@ -106,6 +110,54 @@ class HtmlPopulator:
             element += "</div>"
             elements += element
         return elements
+
+    def generate_vote_options(self, data: list[dict[str, str]]):
+        elements = ""
+        for i, item in enumerate(data, start=1):
+            name = item.get("site_name")
+            url = item.get("vote_link")
+
+            # Open the wrapper divs
+            element = '<div class="table-item first">' if i == 1 else '<div class="table-item">'
+            element += '<div class="item-content vote-option">'
+
+            # Build inner card: cleanly removed id="vote-option" from the site name paragraph!
+            element += f'<p id="vote-number-{i}">{i}</p><p>{name}</p><button class="vote-button" onclick="window.open(\'{url}\', \'_blank\');">Vote</button>'
+
+            # Close both divs and append to the master string
+            element += '</div></div>'
+            elements += element
+
+        return elements
+
+    def generate_vote_all_button(self, data: list[dict[str, str]]):
+        urls = [item.get("vote_link") for item in data if item.get("vote_link")]
+
+        if len(urls) <= 1:
+            return ""
+
+        # Safely format URLs into a JavaScript array string: ['url1', 'url2']
+        urls_js = str(urls).replace('"', "'")
+
+        element = '<div class="vote-all-container">'
+        # Opens our custom modal instead of directly triggering window.open
+        element += f'<button class="vote-all-btn" onclick="openVoteModal({urls_js})">Vote All ({len(urls)})</button>'
+        element += '</div>'
+
+        # Inject the HTML structure for the modal directly below the button container
+        element += '''
+        <div id="vote-modal-overlay" class="vote-modal-overlay">
+            <div class="vote-modal-box">
+                <h3>Open All Voting Links?</h3>
+                <p>This will open multiple tabs for you to support Sundown SMP. Are you ready?</p>
+                <div class="vote-modal-actions">
+                    <button id="vote-modal-yes" class="vote-modal-btn yes">Yes, Open All</button>
+                    <button id="vote-modal-no" class="vote-modal-btn no">Cancel</button>
+                </div>
+            </div>
+        </div>
+        '''
+        return element
 
     def fetch_server_version(self, api_url: str) -> str:
         try:
