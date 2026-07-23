@@ -11,20 +11,31 @@ export async function getConfig(configFile: string) {
 }
 
 export function setupNavigationRouting() {
+    // 1. Handle navbar & internal link clicks
     document.addEventListener('click', (e) => {
         const target = (e.target as HTMLElement).closest('a')
         if (target && target.hash) {
-            if(target.target === '_blank') return // shouldn't prevent the default if we're doing a redirect
+            if (target.target === '_blank') return // don't intercept external/new-tab links
             e.preventDefault()
-            navEventHandler(target)
+            
+            // Update the address bar cleanly without triggering a page jump
+            history.pushState(null, '', target.hash)
+            navEventHandler(target.hash.replace('#', ''))
         }
     })
+
+    // 2. Handle browser Back/Forward button navigation
+    window.addEventListener('hashchange', () => {
+        const intent = window.location.hash.replace('#', '') || 'home'
+        navEventHandler(intent)
+    })
+
+    // 3. Handle initial page load (e.g., landing from sundown.social/vote -> /index.html#vote)
+    const initialIntent = window.location.hash.replace('#', '') || 'home'
+    navEventHandler(initialIntent)
 }
 
-export function navEventHandler(target: HTMLAnchorElement) {
-    // Extract the intent directly from the link's hash, removing the '#' symbol
-    const intent = target.hash.replace('#', '');
-    
+export function navEventHandler(intent: string) {
     const toggleables = document.querySelectorAll('.toggleable, .home');
     toggleables.forEach(toggleable => toggleable.classList.remove('active'));
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -36,7 +47,8 @@ export function navEventHandler(target: HTMLAnchorElement) {
         navbarDropBtn?.classList.remove('active');
     }
 
-    if (intent === 'home') {
+    // Default to 'home' if intent is empty or explicitly 'home'
+    if (intent === 'home' || !intent) {
         const homeSections = document.querySelectorAll('.home');
         homeSections.forEach(section => section.classList.add('active'));
     } else if (intent === 'join') {
