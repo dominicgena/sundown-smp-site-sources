@@ -40,13 +40,15 @@ export function navEventHandler(target: HTMLAnchorElement) {
         const homeSections = document.querySelectorAll('.home');
         homeSections.forEach(section => section.classList.add('active'));
     } else if (intent === 'join') {
-        document.querySelector('.join')?.classList.add('active');
+        document.querySelector('.join')?.classList.add('active')
     } else if (intent === 'gallery') {
-        document.querySelector('.gallery-container')?.classList.add('active');
+        document.querySelector('.gallery-container')?.classList.add('active')
     } else if (intent === 'rules') {
-        document.querySelector('.rules')?.classList.add('active');
+        document.querySelector('.rules')?.classList.add('active')
     } else if (intent === 'downloads' || intent === 'map-downloads') {
-        document.querySelector('.downloads')?.classList.add('active');
+        document.querySelector('.downloads')?.classList.add('active')
+    } else if (intent === 'vote') {
+        document.querySelector('.vote')?.classList.add('active')
     }
 }
 
