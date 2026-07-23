@@ -35,6 +35,7 @@
             {"name": "gal-s1-duif-enchanter-20260322", "altText": "Duifman's enchanter boat and hangar"},
             {"name": "gal-s1-duif-mechanism-air-20260322", "altText": "An aerial view of Duifman's industrial-organic mechanism"},
             {"name": "gal-s1-duif-mechanism-ground-20260322", "altText": "Duifman's industrial-organic mechanism"},
+            {"name": "gal-s1-end-portal-room-20260322.avif", "altText": "Sundown Season 1's End portal room"},
             {"name": "gal-s1-evo-gothic-house-2-20260427", "altText": "Evo's beautiful gothic home"},
             {"name": "gal-s1-evo-gothic-house-20260427", "altText": "An aerial view of Evo's beautiful gothic home"},
             {"name": "gal-s1-nerdy-ghast-barn-20260322", "altText": "Nerdy's happy ghast garage and entrance to barn"},
@@ -54,7 +55,9 @@
         ],
 
         "staff": [
-        {"name": "chonkleblorp", "url": "https://discord.com/users/1200315477013049414", "rankRoles": ["SMP Owner and admin, website developer, administrator, moderator", "SMP Owner", "Shooting Stars", "Starlings"]}
+        {"name": "chonkleblorp", "url": "https://discord.com/users/1200315477013049414", "rankRoles": ["SMP Owner and admin, website developer, administrator, moderator", "SMP Owner", "Shooting Stars", "Starlings"]},
+        {"name": "nikkie", "url": "https://discord.com/users/980249171753852978", "rankRoles": ["Administrator, moderator", "Shooting Stars", "Starlings"]},
+        {"name": "originality", "url": "https://discord.com/users/992975618029400195", "rankRoles": ["Administrator, moderator", "Shooting Stars", "Starlings"]}
         ]
     }
 }
