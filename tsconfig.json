@@ -6,7 +6,7 @@
     "module": "ESNext",
     
     /* Resolution Strategy */
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     
