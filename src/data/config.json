@@ -15,7 +15,8 @@
             {"name": "Gallery", "url": "#gallery", "target": "_self"},
             {"name": "Bluemap", "url": "https://map.sundown.social/#world:-81:64:-92:81:0:0:0:0:perspective", "target": "_blank", "category": "explore"},
             {"name": "Rules", "url": "#rules", "target": "_self", "category": "join"},
-            {"name": "Join", "url": "#join", "target": "_self", "category": "join"}
+            {"name": "Join", "url": "#join", "target": "_self", "category": "join"},
+            {"name": "Vote", "url": "#vote", "target": "_self"}
         ],
         "logo": [
             {"text": "Beach", "for": "sundown-beach","id": "sundown-beach", "value": "/assets/ui/sundown_beach.avif"},
